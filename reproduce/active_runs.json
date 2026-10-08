@@ -1,0 +1,39 @@
+{
+  "goal": "all full evaluations completed with exit code 0; results archived",
+  "storage": "/file_system/efs/checkpoint/intern/haozhe.jia/Uni3R",
+  "runs": {
+    "2": {
+      "gpu": 6,
+      "session": 71570,
+      "directory": "runs/local-20261005T190036Z/2views",
+      "log": "logs/full2.log",
+      "exit_code": 0,
+      "status": "completed, 320/320"
+    },
+    "8": {
+      "gpu": 0,
+      "session": 67486,
+      "directory": "runs/local-20261005T190318Z/8views",
+      "log": "logs/full8.log",
+      "exit_code": 0,
+      "status": "completed, 49/49"
+    },
+    "16": {
+      "gpu": 5,
+      "session": 15947,
+      "directory": "runs/local-20261005T190709Z/16views",
+      "log": "logs/full16.log",
+      "status": "completed, 49/49",
+      "exit_code": 0
+    }
+  },
+  "next": "No evaluation work remaining. Use RESULTS.md and README.md.",
+  "validation": {
+    "kind": "rgb-only pose alignment, final step remains unchanged",
+    "session": 37183,
+    "gpu": 6,
+    "log": "logs/rgb_alignment16.log",
+    "status": "completed; not adopted due to small numerical differences; production changes reverted",
+    "exit_code": 0
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "baseline": "/file_system/efs/checkpoint/intern/haozhe.jia/Uni3R/runs/local-20261005T184511Z/2views/metrics.json",
+  "optimized": "/file_system/efs/checkpoint/intern/haozhe.jia/Uni3R/runs/local-20261005T185632Z/2views/metrics.json",
+  "exactly_equal": {
+    "psnr": true,
+    "ssim": true,
+    "lpips": true,
+    "iou": true,
+    "miou": true,
+    "accuracy": true,
+    "depth": true
+  },
+  "baseline_sample_seconds": 151.5,
+  "optimized_sample_seconds": 6.5742,
+  "note": "GPU timing depends on shared load; all metrics including depth exactly equal for this sample."
+}

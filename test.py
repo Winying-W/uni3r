@@ -14,6 +14,7 @@ from uni3r.utils.path_manager import init_all_submodules
 init_all_submodules()
 import os
 import argparse
+import json
 from collections import defaultdict
 from pathlib import Path
 from typing import Sized
@@ -40,7 +41,7 @@ from uni3r.loss import loss_of_one_batch  # noqa
 import croco.utils.misc as misc  # noqa
 
 def get_args_parser():
-    parser = argparse.ArgumentParser('DUST3R testing', add_help=False)
+    parser = argparse.ArgumentParser('Uni3R testing')
     parser.add_argument('--pretrained', default=None, help='path of a starting checkpoint')
     parser.add_argument('--lseg_pretrained', default="checkpoints/pretrained_models/demo_e200.ckpt", help='path of lseg_pretrained')
     parser.add_argument('--test_criterion', default=None, type=str, help="test criterion")
@@ -52,6 +53,8 @@ def get_args_parser():
     parser.add_argument('--amp', type=int, default=0, choices=[0, 1], help="Use Automatic Mixed Precision")
     parser.add_argument('--print_freq', default=20, type=int, help='frequency to print infos while testing')
     
+    parser.add_argument('--max_batches', default=None, type=int, help='Limit batches for a smoke run; omit for full evaluation')
+
     # output directories
     parser.add_argument('--test_results_dir', default='./test_results/', type=str, help="path where to save the test results")
     return parser
@@ -87,7 +90,7 @@ def main(args):
     else:
         raise ValueError("num_views not found in test_dataset")
     
-    model = Uni3R.from_pretrained(args.pretrained, device, num_views_value=num_views_value)
+    model = Uni3R.from_pretrained(args.pretrained, device=device, num_views_value=num_views_value)
     model.eval()
     
     # Test on datasets
@@ -129,7 +132,11 @@ def test_one_epoch(model: torch.nn.Module, criterion: torch.nn.Module,
         data_loader.sampler.set_epoch(1) # 1 is a dummy value
 
     total_time = []
+    processed_batches = 0
     for batch_id, batch in enumerate(metric_logger.log_every(data_loader, args.print_freq, header)):
+        if args.max_batches is not None and batch_id >= args.max_batches:
+            break
+        processed_batches += 1
         res = loss_of_one_batch(batch, model, criterion, device,
                                        symmetrize_batch=False,
                                        use_amp=bool(args.amp),
@@ -146,6 +153,37 @@ def test_one_epoch(model: torch.nn.Module, criterion: torch.nn.Module,
     print('mIoU: ', criterion.miou.compute(), criterion.miou.compute().mean())
     print('Acc: ', criterion.accuracy.compute())
     print('Depth Metrics: ', criterion.depth_metric.compute())
+
+    def serializable(value):
+        if isinstance(value, torch.Tensor):
+            return value.detach().cpu().tolist()
+        if isinstance(value, dict):
+            return {k: serializable(v) for k, v in value.items()}
+        return value
+
+    metrics = {
+        'psnr': criterion.psnr.compute(),
+        'ssim': criterion.ssim.compute(),
+        'lpips': criterion.compute_lpips_mean(),
+        'iou': criterion.miou.compute(),
+        'miou': criterion.miou.compute().mean(),
+        'accuracy': criterion.accuracy.compute(),
+        'depth': criterion.depth_metric.compute(),
+        'num_batches': processed_batches,
+        'total_batches': len(data_loader),
+        'smoke_run': args.max_batches is not None,
+        'fast_pose_alignment': criterion.fast_pose_alignment,
+        'pose_align_steps': criterion.pose_align_steps,
+        'dataset': args.test_dataset,
+        'checkpoint': args.pretrained,
+        'scene_count': len(data_loader.dataset.scenes),
+        'input_views': data_loader.dataset.num_views,
+        'model_forward_seconds_mean': sum(total_time) / len(total_time) if total_time else None,
+        'timing_samples': len(total_time),
+        'gpu': torch.cuda.get_device_name(device),
+    }
+    with open(Path(args.test_results_dir) / 'metrics.json', 'w') as f:
+        json.dump(serializable(metrics), f, indent=2)
 
     sum_time = 0.0
     avg_time = 0.0

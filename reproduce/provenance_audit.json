@@ -1,0 +1,23 @@
+{
+  "run_artifact_sha256": {
+    "local-20261005T190036Z": {
+      "code.patch": "e4ddedeb910a0887ee16876faa025e376561582b363e39b493b660953605efa3",
+      "packages.txt": "2baa4322efeef113ac3c905ced9a17e493a92133c7b648ca162e7f939b521483",
+      "lseg_vendor.patch": "7821bf91ab9757ca98b5d129bde211dcbe1ac38c978fca8a98aa7b81c9853c85"
+    },
+    "local-20261005T190318Z": {
+      "code.patch": "e4ddedeb910a0887ee16876faa025e376561582b363e39b493b660953605efa3",
+      "packages.txt": "2baa4322efeef113ac3c905ced9a17e493a92133c7b648ca162e7f939b521483",
+      "lseg_vendor.patch": "7821bf91ab9757ca98b5d129bde211dcbe1ac38c978fca8a98aa7b81c9853c85"
+    },
+    "local-20261005T190709Z": {
+      "code.patch": "e4ddedeb910a0887ee16876faa025e376561582b363e39b493b660953605efa3",
+      "packages.txt": "2baa4322efeef113ac3c905ced9a17e493a92133c7b648ca162e7f939b521483",
+      "lseg_vendor.patch": "7821bf91ab9757ca98b5d129bde211dcbe1ac38c978fca8a98aa7b81c9853c85"
+    }
+  },
+  "current_diff_sha256": "e4ddedeb910a0887ee16876faa025e376561582b363e39b493b660953605efa3",
+  "current_source_matches_runs": true,
+  "repository_base_commit": "4a5dd00b6737a95afd4c6b1760cad166cf17d3d4",
+  "pinned_submodule_gitlinks": "160000 commit 14bf4111301ae5d5c5a41cf289573444ff88e3f6\tsubmodules/diff-gaussian-rasterization\n040000 tree 6b0e1f270eb83240f918bf9a60cd980b6be8d0c2\tsubmodules/dust3r\n160000 commit 65c0a0978fa2e562cda695afed1554c63ec35cb9\tsubmodules/lang_seg\n160000 commit 059c288227aa00faaf1a4ecf3f4f3be9b40aa467\tsubmodules/vggt\n"
+}

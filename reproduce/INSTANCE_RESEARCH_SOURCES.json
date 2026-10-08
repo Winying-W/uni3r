@@ -1,0 +1,228 @@
+{
+  "accessed_utc_date": "2026-10-07",
+  "local_base_commit": "4a5dd00b6737a95afd4c6b1760cad166cf17d3d4",
+  "sources": [
+    {
+      "name": "UniForward",
+      "url": "https://arxiv.org/html/2506.09378",
+      "sha256": "a293543a0d09f07b48dfde8d738b1ea4dc56aef47b4285c1f3902dfb186c291f",
+      "downloaded_copy": "/tmp/uni3r_research/uniforward.html"
+    },
+    {
+      "name": "Uni3R",
+      "url": "https://arxiv.org/html/2508.03643",
+      "sha256": "e807c0d95df9010048986cef5aab0f4d9b050614fc4cfaa65cd611e7f5bed1f4",
+      "downloaded_copy": "/tmp/uni3r_research/uni3r.html"
+    },
+    {
+      "name": "SIU3R",
+      "url": "https://arxiv.org/html/2507.02705",
+      "sha256": "9aab7b164453a36c1c9b8ef8add0bb9c6f8d0b4010b7536834b76318222955af",
+      "downloaded_copy": "/tmp/uni3r_research/siu3r.html"
+    },
+    {
+      "name": "GroupForward",
+      "url": "https://arxiv.org/html/2608.17535",
+      "sha256": "2323449ae13e06dc4855703de5e7257a57f6f35bc6bbaa429b95b10f150eec32",
+      "downloaded_copy": "/tmp/uni3r_research/groupforward.html"
+    },
+    {
+      "name": "IGGT",
+      "url": "https://arxiv.org/html/2510.22706",
+      "sha256": "6056c4e2c063973e186edaffb0fb41ef26960dda209bddc46a7ac54f4dc9bb77",
+      "downloaded_copy": "/tmp/uni3r_research/iggt.html"
+    },
+    {
+      "name": "EPS3D",
+      "url": "https://arxiv.org/html/2606.08980",
+      "sha256": "886baae65bab590d59c8845b7248363497fd8c71971c86460f40e3e9e715585e",
+      "downloaded_copy": "/tmp/uni3r_research/eps3d.html"
+    },
+    {
+      "name": "MV3DIS",
+      "url": "https://arxiv.org/html/2604.08916",
+      "sha256": "82ade5e4195071f952408680fb963f083e2d81439d5019561a1a0d7059e0e1f5",
+      "downloaded_copy": "/tmp/uni3r_research/mv3dis_paper.html"
+    },
+    {
+      "name": "SAM2Object",
+      "url": "https://openaccess.thecvf.com/content/CVPR2025/html/Zhao_SAM2Object_Consolidating_View_Consistency_via_SAM2_for_Zero-Shot_3D_Instance_CVPR_2025_paper.html",
+      "sha256": "07f2fd1ae34a0e9bee5144eb4990af0cf4dc6204b451ab1000823a7e0db98a42",
+      "downloaded_copy": "/tmp/uni3r_research/sam2object.html"
+    },
+    {
+      "name": "SIU3R model",
+      "url": "https://github.com/WU-CVGL/SIU3R/blob/main/src/models/model.py",
+      "sha256": "b4016eee80423ecf20022d47879fb2e7cccd2f60c5d4b1f1141c2b14c648eb3c",
+      "downloaded_copy": "/tmp/uni3r_research/siu3r_model_raw.py"
+    },
+    {
+      "name": "SIU3R decoder",
+      "url": "https://github.com/WU-CVGL/SIU3R/blob/main/src/models/mask2former/video_seg_decoder.py",
+      "sha256": "0f052d88d57412404bdb8fe49cefd0c02855fb27e8355ed1c80267c199b4d683",
+      "downloaded_copy": "/tmp/uni3r_research/siu3r_decoder.py"
+    },
+    {
+      "name": "EPS3D encoder",
+      "url": "https://github.com/Runsong123/EPS3D/blob/main/src/model/encoder/eps3d_encoder.py",
+      "sha256": "8b3d5e455cd32e5b4c433c0e9d51971f50df899923d05821725bb1b3635d5b23",
+      "downloaded_copy": "/tmp/uni3r_research/eps3d_encoder.py"
+    },
+    {
+      "name": "MV3DIS implementation",
+      "url": "https://github.com/zybjn/MV3DIS/blob/main/mv3dis_main.py",
+      "sha256": "59552e31d000c963857e18a1c6f52f0b8449c92526fdd6b50d7bc40f54a24517",
+      "downloaded_copy": "/tmp/uni3r_research/mv3dis_main.py"
+    },
+    {
+      "name": "SAM2Object implementation",
+      "url": "https://github.com/jihuaizhaohd/SAM2Object/blob/main/graphclustering/sam2object_base.py",
+      "sha256": "a33d2500db255c8e7f15d40aa1b633cbb44a05184b78d6f3be22ef4767da3c10",
+      "downloaded_copy": "/tmp/uni3r_research/sam2object_base.py"
+    }
+  ],
+  "limitations": [
+    "UniForward official implementation not located through the paper links and GitHub repository/readme search. UniForward architecture claims are paper-level, not code-verified.",
+    "SAM2Object paper abstract and official implementation/README inspected; full paper not read in this review.",
+    "No new geometry or instance training/evaluation was run. Existing scores include pose alignment and aligned depth metrics.",
+    "Search is not an exhaustive novelty clearance; several general web search results were unrelated and were excluded."
+  ],
+  "checkpoint_structure": {
+    "2": {
+      "path": "/file_system/efs/checkpoint/intern/haozhe.jia/Uni3R/checkpoints/2views.pth",
+      "model": "Uni3R(config={'dust3r_config': {'freeze': 'encoder', 'pretrained_model_name_or_path': 'checkpoints/pretrained_models/DUSt3R_ViTLarge_BaseDecoder_512_dpt.pth'}, 'point_transformer_config': {'cross_dust': True, 'cross_lseg': True, 'cross_multi_scale': True, 'enc_depths': [1, 1, 1, 3, 1], 'enc_channels': [32, 64, 128, 256, 512], 'enc_num_head': [2, 4, 8, 16, 32], 'enc_patch_size': [1024, 1024, 1024, 1024, 1024], 'dec_depths': [1, 1, 1, 1], 'dec_channels': [64, 64, 128, 256], 'dec_num_head': [4, 4, 8, 16], 'dec_patch_size': [1024, 1024, 1024, 1024]}, 'gaussian_head_config': {'rgb_residual': True, 'feat_residual': False, 'd_gs_feats': 64}, 'lseg_config': {'pretrained_model_name_or_path': 'checkpoints/pretrained_models/demo_e200.ckpt', 'half_res': True}, 'freeze_dust3r': False, 'freeze_lseg': True})",
+      "epoch": 100,
+      "groups": {
+        "distiller": 1256537516,
+        "vggt.aggregator": 908167168,
+        "vggt.camera_head": 216174610,
+        "vggt.point_head": 32654628,
+        "vggt.depth_head": 32654562,
+        "vggt.track_head": 65941396,
+        "dpt_head": 32950528,
+        "gs_attr_proj": 621691,
+        "gaussian_head": 7800,
+        "lseg_feature_extractor": 495144697,
+        "feature_expansion": 33280,
+        "feature_reduction": 32832
+      },
+      "selected_shapes": {
+        "vggt.aggregator.intrinsic_encoder.weight": [
+          1024,
+          9
+        ],
+        "dpt_head.projects.0.weight": [
+          256,
+          2048,
+          1,
+          1
+        ],
+        "gs_attr_proj.0.weight": [
+          256,
+          256,
+          3,
+          3
+        ],
+        "gs_attr_proj.2.weight": [
+          123,
+          256,
+          1,
+          1
+        ],
+        "gs_attr_proj.2.bias": [
+          123
+        ]
+      }
+    },
+    "8": {
+      "path": "/file_system/efs/checkpoint/intern/haozhe.jia/Uni3R/checkpoints/8views.pth",
+      "model": "VG3R(config={'dust3r_config': {'freeze': 'encoder', 'pretrained_model_name_or_path': 'checkpoints/pretrained_models/DUSt3R_ViTLarge_BaseDecoder_512_dpt.pth'}, 'point_transformer_config': {'cross_dust': True, 'cross_lseg': True, 'cross_multi_scale': True, 'enc_depths': [1, 1, 1, 3, 1], 'enc_channels': [32, 64, 128, 256, 512], 'enc_num_head': [2, 4, 8, 16, 32], 'enc_patch_size': [1024, 1024, 1024, 1024, 1024], 'dec_depths': [1, 1, 1, 1], 'dec_channels': [64, 64, 128, 256], 'dec_num_head': [4, 4, 8, 16], 'dec_patch_size': [1024, 1024, 1024, 1024]}, 'gaussian_head_config': {'rgb_residual': True, 'feat_residual': False, 'd_gs_feats': 64}, 'lseg_config': {'pretrained_model_name_or_path': 'checkpoints/pretrained_models/demo_e200.ckpt', 'half_res': True}, 'freeze_dust3r': False, 'freeze_lseg': True})",
+      "epoch": 49,
+      "groups": {
+        "vggt.aggregator": 908167168,
+        "vggt.camera_head": 216174610,
+        "vggt.point_head": 32654628,
+        "vggt.depth_head": 32654562,
+        "vggt.track_head": 65941396,
+        "dpt_head": 32950528,
+        "gs_attr_proj": 621691,
+        "gaussian_head": 7800,
+        "lseg_feature_extractor": 495144697,
+        "feature_expansion": 33280,
+        "feature_reduction": 32832
+      },
+      "selected_shapes": {
+        "vggt.aggregator.intrinsic_encoder.weight": [
+          1024,
+          9
+        ],
+        "dpt_head.projects.0.weight": [
+          256,
+          2048,
+          1,
+          1
+        ],
+        "gs_attr_proj.0.weight": [
+          256,
+          256,
+          3,
+          3
+        ],
+        "gs_attr_proj.2.weight": [
+          123,
+          256,
+          1,
+          1
+        ],
+        "gs_attr_proj.2.bias": [
+          123
+        ]
+      }
+    },
+    "16": {
+      "path": "/file_system/efs/checkpoint/intern/haozhe.jia/Uni3R/checkpoints/16views.pth",
+      "model": "VG3R(config={'dust3r_config': {'freeze': 'encoder', 'pretrained_model_name_or_path': 'checkpoints/pretrained_models/DUSt3R_ViTLarge_BaseDecoder_512_dpt.pth'}, 'point_transformer_config': {'cross_dust': True, 'cross_lseg': True, 'cross_multi_scale': True, 'enc_depths': [1, 1, 1, 3, 1], 'enc_channels': [32, 64, 128, 256, 512], 'enc_num_head': [2, 4, 8, 16, 32], 'enc_patch_size': [1024, 1024, 1024, 1024, 1024], 'dec_depths': [1, 1, 1, 1], 'dec_channels': [64, 64, 128, 256], 'dec_num_head': [4, 4, 8, 16], 'dec_patch_size': [1024, 1024, 1024, 1024]}, 'gaussian_head_config': {'rgb_residual': True, 'feat_residual': False, 'd_gs_feats': 64}, 'lseg_config': {'pretrained_model_name_or_path': 'checkpoints/pretrained_models/demo_e200.ckpt', 'half_res': True}, 'freeze_dust3r': False, 'freeze_lseg': True})",
+      "epoch": 99,
+      "groups": {
+        "vggt.aggregator": 908167168,
+        "vggt.camera_head": 216174610,
+        "vggt.point_head": 32654628,
+        "vggt.depth_head": 32654562,
+        "vggt.track_head": 65941396,
+        "dpt_head": 32950528,
+        "gs_attr_proj": 621691,
+        "gaussian_head": 7800,
+        "lseg_feature_extractor": 495144697,
+        "feature_expansion": 33280,
+        "feature_reduction": 32832
+      },
+      "selected_shapes": {
+        "vggt.aggregator.intrinsic_encoder.weight": [
+          1024,
+          9
+        ],
+        "dpt_head.projects.0.weight": [
+          256,
+          2048,
+          1,
+          1
+        ],
+        "gs_attr_proj.0.weight": [
+          256,
+          256,
+          3,
+          3
+        ],
+        "gs_attr_proj.2.weight": [
+          123,
+          256,
+          1,
+          1
+        ],
+        "gs_attr_proj.2.bias": [
+          123
+        ]
+      }
+    }
+  }
+}

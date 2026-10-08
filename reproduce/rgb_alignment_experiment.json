@@ -1,0 +1,24 @@
+{
+  "baseline": "/file_system/efs/checkpoint/intern/haozhe.jia/Uni3R/runs/local-20261005T190324Z/16views/metrics.json",
+  "experiment": "/file_system/efs/checkpoint/intern/haozhe.jia/Uni3R/runs/local-20261005T191245Z/16views/metrics.json",
+  "adopted": false,
+  "reason": "small nonzero numerical differences; preserve validated full evaluation path",
+  "sample_seconds": {
+    "baseline": 97.3045,
+    "experiment": 37.7973
+  },
+  "metric_differences": {
+    "psnr": -0.0001983642578125,
+    "ssim": -7.748603820800781e-07,
+    "lpips": 4.12066777549791e-06,
+    "miou": 2.950429916381836e-06,
+    "accuracy": 7.152557373046875e-06
+  },
+  "depth_differences": {
+    "AbsRel": -3.376975655555725e-06,
+    "RMSE": -2.7649104595184326e-05,
+    "Delta1": -4.547834396362305e-05,
+    "Delta2": 1.4066696166992188e-05,
+    "Delta3": 2.378225326538086e-05
+  }
+}

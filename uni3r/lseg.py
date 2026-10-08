@@ -3,7 +3,7 @@ import torch.nn as nn
 from submodules.lang_seg.modules.models.lseg_net import LSegNet, clip
 
 class LSegFeatureExtractor(LSegNet):
-    def __init__(self, half_res=True):
+    def __init__(self, half_res=True, use_pretrained=True):
         super().__init__(
             labels='', 
             backbone='clip_vitl16_384', 
@@ -11,7 +11,8 @@ class LSegFeatureExtractor(LSegNet):
             crop_size=224, 
             arch_option=0, 
             block_depth=0, 
-            activation='lrelu'
+            activation='lrelu',
+            use_pretrained=use_pretrained
         )
 
         self.half_res = half_res
@@ -110,7 +111,7 @@ class LSegFeatureExtractor(LSegNet):
     @classmethod
     def from_pretrained(cls, pretrained_model_name_or_path, *args, **kwargs):
         print(f"Loading checkpoint from: {pretrained_model_name_or_path}")
-        ckpt = torch.load(pretrained_model_name_or_path, map_location='cpu')
+        ckpt = torch.load(pretrained_model_name_or_path, map_location='cpu', weights_only=False, mmap=True)
         print(f"Checkpoint loaded. Keys in checkpoint: {ckpt.keys()}")
         
         print("Processing state dict...")
@@ -118,6 +119,8 @@ class LSegFeatureExtractor(LSegNet):
         print(f"Processed state dict. Number of keys: {len(new_state_dict)}")
         
         print("Initializing model...")
+        # Every parameter is replaced by the strict LSeg checkpoint below.
+        kwargs["use_pretrained"] = False
         model = cls(*args, **kwargs)
         
         print("Loading state dict into model...")

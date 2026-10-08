@@ -340,6 +340,7 @@ class TestLoss(MultiLoss):
     def __init__(self,
                  pose_align_steps=False,
                  num_views=3,
+                 fast_pose_alignment=False,
                  labels=['wall', 'floor', 'ceiling', 'chair', 'table', 'sofa', 'bed', 'other']):
         super().__init__()
         self.labels = labels
@@ -365,6 +366,7 @@ class TestLoss(MultiLoss):
         # bg_color
         self.register_buffer('bg_color', torch.tensor([0.0, 0.0, 0.0]).cuda())
 
+        self.fast_pose_alignment = fast_pose_alignment
         self.pose_align_steps = pose_align_steps
         if self.pose_align_steps:
             self.pose_embeds = nn.Embedding(num_views - 1, 9)
@@ -452,6 +454,10 @@ class TestLoss(MultiLoss):
         rendered_images = torch.stack(rendered_images, dim=0)  # B, 3, H, W
         rendered_images = rendered_images.squeeze(1).permute(0, 3, 1, 2)
         gt_images = torch.stack(gt_images, dim=0)
+        # Only RGB L1 participates in pose optimization. Keep all semantic
+        # calculations and metrics on the final evaluation step.
+        if not evaluate and self.fast_pose_alignment:
+            return torch.abs(rendered_images - gt_images).mean(), {}
         rendered_feats = torch.stack(rendered_feats, dim=0)  # B, d_feats, H, W
         rendered_feats = rendered_feats.squeeze(1).permute(0, 3, 1, 2)
         rendered_feats = model.feature_expansion(rendered_feats)  # B, 512, H//2, W//2
@@ -514,7 +520,6 @@ def loss_of_one_batch(batch,
 
     context_views = []
     target_views = []
-    total_time = []
 
     assert len(batch) != 0
 
@@ -545,17 +550,17 @@ def loss_of_one_batch(batch,
     actual_model = model.module if hasattr(model, 'module') else model
 
     with torch.cuda.amp.autocast(enabled=bool(use_amp)):
-        # torch.cuda.synchronize()
-        # time_start = time.perf_counter()
+        if total_time is not None:
+            torch.cuda.synchronize()
+            time_start = time.perf_counter()
         if actual_model.training:
             pred = actual_model(context_views)
         else:
             with torch.no_grad():
                 pred = actual_model(context_views)
-        # torch.cuda.synchronize()
-        # time_end = time.perf_counter()
-        # elapsed = time_end - time_start
-        # total_time.append(elapsed)
+        if total_time is not None:
+            torch.cuda.synchronize()
+            total_time.append(time.perf_counter() - time_start)
 
         if len(batch) < 5:
             render_views = context_views + target_views

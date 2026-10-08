@@ -1,0 +1,10 @@
+--- a/modules/models/lseg_net.py
++++ b/modules/models/lseg_net.py
+@@ -126,6 +126,7 @@
+         self.clip_pretrained, self.pretrained, self.scratch = _make_encoder(
+             backbone,
+             features,
++            use_pretrained=kwargs.get("use_pretrained", True),
+             groups=1,
+             expand=False,
+             exportable=False,

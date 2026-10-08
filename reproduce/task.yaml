@@ -1,0 +1,41 @@
+TaskName: uni3r-scannet-eval-2-8-16views-3l20-20261005
+Description: Prepare Uni3R dependencies and official ScanNet test assets on haozhe.jia
+  EFS, then independently evaluate 2/8/16-view published checkpoints on three L20
+  GPUs.
+Entrypoint: timeout 24h bash /file_system/vepfs/intern/haozhe.jia/projects/FastWAM/3DGS/Uni3R/reproduce/run_cloud.sh
+Tags: []
+UserCodePath: ''
+RemoteMountCodePath: ''
+Envs: []
+ResourceQueueID: q-20260718133137-lhvrm
+Framework: PyTorchDDP
+TaskRoleSpecs:
+- RoleName: worker
+  RoleReplicas: 1
+  Flavor: custom
+  ResourceSpec:
+    Family: ml.gni3cl
+    CPU: 24
+    Memory: 240
+    GPUNum: 3
+ActiveDeadlineSeconds: 86400
+EnableTensorBoard: false
+Storages:
+- Type: Vepfs
+  MountPath: /file_system/vepfs/intern/haozhe.jia
+  VepfsId: vepfs-cnbjc105827ad474
+  SubPath: intern/haozhe.jia
+- Type: VolcEfs
+  MountPath: /file_system/efs
+  VolcEfsId: efs-cnbjc5ac4cec04b91
+  VolcEfsAccessPointId: ap-f62f650a
+  SubPath: ''
+ImageUrl: vemlp-cn-beijing.cr.volces.com/preset-images/pytorch:2.12.0-cu13.0.3-py3.12-ubuntu24.04
+CacheType: Cloudfs
+RetryOptions:
+  EnableRetry: false
+  MaxRetryTimes: 5
+  IntervalSeconds: 120
+  PolicySets: []
+  EnableReserveResourceOnRetry: false
+Priority: 4

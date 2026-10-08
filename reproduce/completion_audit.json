@@ -1,0 +1,44 @@
+{
+  "verified_utc": "2026-10-05T20:06:12.638018+00:00",
+  "requirements": {
+    "scannet_and_official_weights_on_user_efs": true,
+    "dependencies_and_cuda_inference_validated": true,
+    "full_2_8_16_view_evaluations_on_local_L20": true,
+    "actual_metrics_logs_and_reproduction_instructions_saved": true,
+    "paper_comparison_and_protocol_limitations_documented": true
+  },
+  "runs": {
+    "2": {
+      "metrics": "/file_system/efs/checkpoint/intern/haozhe.jia/Uni3R/runs/local-20261005T190036Z/2views/metrics.json",
+      "metrics_sha256": "09e3f262d745c9495d9604ef0f53ae6e34498f6e70b8a31bd1a73874b490b31e",
+      "exit_code": 0,
+      "completed_batches": 320,
+      "scene_count": 40,
+      "gpu": "NVIDIA L20",
+      "weight_sha256_at_verified_assembly": "660aed13d6a8bccd078be35210f803d0f6d3b312f63dd468bbccc1c7f3aacf24"
+    },
+    "8": {
+      "metrics": "/file_system/efs/checkpoint/intern/haozhe.jia/Uni3R/runs/local-20261005T190318Z/8views/metrics.json",
+      "metrics_sha256": "7e23d44895466f93dfbec0be6ffcd4b8b3b7a9e3e0fc53fec727b5dfc71ec850",
+      "exit_code": 0,
+      "completed_batches": 49,
+      "scene_count": 49,
+      "gpu": "NVIDIA L20",
+      "weight_sha256_at_verified_assembly": "878cf8260c91feaa4786f4c46bbe1e9a3e4bef8c18d53fb6334266f1f00b1e7c"
+    },
+    "16": {
+      "metrics": "/file_system/efs/checkpoint/intern/haozhe.jia/Uni3R/runs/local-20261005T190709Z/16views/metrics.json",
+      "metrics_sha256": "a7f3ebd5e86d098790a131b576f42c19b51218dddcdba32832a550fcb2d66da0",
+      "exit_code": 0,
+      "completed_batches": 49,
+      "scene_count": 49,
+      "gpu": "NVIDIA L20",
+      "weight_sha256_at_verified_assembly": "ab4ff3d521641bb7377a10d0f07ea755662350da46ae117600a8e88dbb9a5246"
+    }
+  },
+  "current_source_diff_sha256": "e4ddedeb910a0887ee16876faa025e376561582b363e39b493b660953605efa3",
+  "limitations": [
+    "Released multi-view loader uses 49 scenes; paper states 40. Scores are released-code results, not an exact paper-protocol match.",
+    "Score differences are reported without unsupported causal attribution."
+  ]
+}

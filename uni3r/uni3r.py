@@ -16,6 +16,7 @@
 
 
 import torch
+import os
 import torch.nn as nn
 import torch.nn.functional as F
 from einops import rearrange
@@ -39,6 +40,9 @@ class Uni3R(nn.Module):
     def __init__(self, config: LSMConfig, num_views=2):
         super().__init__()
         self.config = LSMConfig(**config)
+        if os.environ.get("UNI3R_LSEG_CHECKPOINT"):
+            self.config.lseg_config = dict(self.config.lseg_config)
+            self.config.lseg_config["pretrained_model_name_or_path"] = os.environ["UNI3R_LSEG_CHECKPOINT"]
 
         _url = "https://huggingface.co/facebook/VGGT-1B/resolve/main/model.pt"
         weights = torch.hub.load_state_dict_from_url(_url, map_location='cpu')
@@ -173,7 +177,7 @@ class Uni3R(nn.Module):
                         device: str = 'cuda',
                         num_views_value: int = 2):
 
-        ckpt = torch.load(checkpoint_path, map_location='cpu')  # load checkpoint to cpu for saving memory
+        ckpt = torch.load(checkpoint_path, map_location='cpu', weights_only=False, mmap=True)  # load checkpoint to cpu for saving memory
         args = ckpt['args'].model.replace("ManyAR_PatchEmbed", "PatchEmbedDust3R")
         if 'VG3R' in args:
             args = args.replace('VG3R', 'Uni3R')
@@ -208,6 +212,13 @@ class Uni3R(nn.Module):
             state_dict = {
                 k: v for k, v in state_dict.items() if not k.startswith('dust3r')
             }
-        model.load_state_dict(state_dict, strict=False)
+        incompatible = model.load_state_dict(state_dict, strict=False)
+        missing = [key for key in incompatible.missing_keys
+                   if not (key.startswith('distiller.') or
+                           (use_pretrained_lseg and key.startswith('lseg_feature_extractor')))]
+        print(f"Checkpoint loaded: {len(state_dict)} keys; "
+              f"unexpected={incompatible.unexpected_keys}; missing_non_lseg={missing}")
+        if missing:
+            raise RuntimeError(f"Checkpoint is missing model weights: {missing}")
         del ckpt
         return model.to(device)

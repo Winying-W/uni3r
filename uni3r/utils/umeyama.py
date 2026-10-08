@@ -1,8 +1,6 @@
 import numpy as np
 import torch
 from einops import rearrange
-from pytorch3d.ops import knn_points
-from pytorch3d.loss import chamfer_distance
 
 def umeyama(X_all, Y_all, Conf_map=None, ratio=1.0):
     """
@@ -100,6 +98,7 @@ def umeyama(X_all, Y_all, Conf_map=None, ratio=1.0):
     return X_PM_all, Y_all, pm_loss
 
 def single_direction_chamfer_loss(pred_points, target_points):
+    from pytorch3d.loss import chamfer_distance
     # loss_bidirectional, _ = chamfer_distance(pred_points, target_points)
     loss_sindirectional, _ = chamfer_distance(pred_points, target_points, single_directional=True)
     return loss_sindirectional
