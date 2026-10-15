@@ -1,0 +1,11 @@
+{
+  "filename": "filelock-4.0.10-py3-none-any.whl",
+  "url": "https://files.pythonhosted.org/packages/5b/2a/4b1ea3f2180be251a5cff1e70c8a5b7994ffa5c8eab8937901f8a9db58fe/filelock-4.0.10-py3-none-any.whl",
+  "digests": {
+    "blake2b_256": "5b2a4b1ea3f2180be251a5cff1e70c8a5b7994ffa5c8eab8937901f8a9db58fe",
+    "md5": "4eb116b4715d8017185bb46f001f60ec",
+    "sha256": "698048d158dc3c9e18cc5e88b3efdd4bd0e77d76686b22adb4511cc4b2c2f0db"
+  },
+  "size": 111193,
+  "metadata_url": "https://pypi.org/pypi/filelock/4.0.10/json"
+}

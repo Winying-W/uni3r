@@ -1,0 +1,11 @@
+{
+  "filename": "networkx-3.4.2-py3-none-any.whl",
+  "url": "https://files.pythonhosted.org/packages/b9/54/dd730b32ea14ea797530a4479b2ed46a6fb250f682a9cfb997e968bf0261/networkx-3.4.2-py3-none-any.whl",
+  "digests": {
+    "blake2b_256": "b954dd730b32ea14ea797530a4479b2ed46a6fb250f682a9cfb997e968bf0261",
+    "md5": "89eb175a18e13a9a67f68d7fd2e97b86",
+    "sha256": "df5d4365b724cf81b8c6a7312509d0c22386097011ad1abe274afd5e9d3bbc5f"
+  },
+  "size": 1723263,
+  "metadata_url": "https://pypi.org/pypi/networkx/3.4.2/json"
+}

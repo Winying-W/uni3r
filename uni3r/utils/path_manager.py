@@ -46,6 +46,10 @@ def init_all_submodules():
                   if path.isdir(path.join(SUBMODULES_PATH, d))]
     
     for submodule in submodules:
+        # These build trees are installed as wheels. Adding them to sys.path
+        # hides the installed CUDA extensions (notably pytorch3d._C).
+        if submodule in {'pytorch3d', 'simple-knn', 'CLIP'}:
+            continue
         add_submodule_to_path(submodule) 
     
     # Add the project root to the Python path

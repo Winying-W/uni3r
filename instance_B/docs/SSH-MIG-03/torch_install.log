@@ -1,0 +1,5 @@
+Using Python 3.10.21 environment at: instance_B/.venv
+Resolved 1 package in 24ms
+Prepared 1 package in 37.67s
+Installed 1 package in 5m 42s
+ + torch==2.1.0+cu121 (from file:///mnt/workspace/Jensen/project/3DGS/Uni3R/instance_B/.cache/wheelhouse/torch-2.1.0+cu121-cp310-cp310-linux_x86_64.whl)

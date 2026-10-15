@@ -1,0 +1,62 @@
+/mnt/workspace/Jensen/project/3DGS/Uni3R/instance_B/.venv/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+test_confidence_range_and_fractional_weights (instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST) ... ok
+test_default_target_dimensions_q100 (instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST) ... ok
+test_detached_inputs_required (instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST) ... ok
+test_empty_background_and_all_ignore_scenes (instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST) ... ok
+test_frame_scene_and_batch_alignment (instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST) ... ok
+test_gaussian_filter_duplicates_dtype_and_empty (instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST) ... ok
+test_gaussian_filter_mapping (instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST) ... ok
+test_geometry_confidence_is_not_label_probability (instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST) ... ok
+test_id_rules_background_and_unknown (instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST) ... ok
+test_ignored_nan_not_hidden (instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST) ... ok
+test_input_shapes_rejected (instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST) ... ok
+test_invalid_pixel_must_have_zero_weight (instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST) ... ok
+test_invalid_positive_and_zero_weight_ids_omitted (instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST) ... ok
+test_logits_allow_negative_and_greater_than_one_and_grad (instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST) ... ok
+test_metadata_crop_and_normalization (instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST) ... ok
+test_metadata_dtype_and_special_tokens (instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST) ... ok
+test_missing_metadata_precise_errors (instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST) ... ok
+test_nan_inf_rejected (instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST) ... ok
+test_no_input_mutation (instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST) ... ok
+test_opaque_gaussian_payload_finiteness (instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST) ... ok
+test_prediction_nan_and_integer_dtype (instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST) ... ok
+test_prediction_shapes_and_flexible_query_count (instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST) ... ok
+test_real_provenance_validation_negative_only (instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST) ... ok
+test_required_dtypes (instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST) ... ok
+test_scene_local_ids_not_batch_global (instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST) ... ok
+test_scene_union_and_single_view_visibility (instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST) ... ok
+test_special_token_shape_and_layer_keys (instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST) ... ok
+test_synthetic_cannot_claim_real_checkpoint (instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST) ... ok
+test_unknown_cannot_be_valid (instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST) ... ok
+test_valid_small_batch (instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST) ... ok
+test_version_and_status (instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST) ... ok
+test_real_fixture_not_available (instance_B.tests.test_contracts.REAL_UNI3R_FIXTURE_TEST) ... skipped 'NOT RUN: A has not supplied a real feature fixture inside the authorized root; replace this placeholder when integration is authorized'
+test_a_dpt_init_complete_and_independent_storage (instance_B.tests.test_student.STUDENT_SYNTHETIC_TEST) ... ok
+test_b_DPT_ADAPTER_SYNTHETIC_PARITY (instance_B.tests.test_student.STUDENT_SYNTHETIC_TEST) ... ok
+test_c_shapes_dtype_finite_b2 (instance_B.tests.test_student.STUDENT_SYNTHETIC_TEST) ... ok
+test_d_variable_q (instance_B.tests.test_student.STUDENT_SYNTHETIC_TEST) ... ok
+test_e_scene_independence (instance_B.tests.test_student.STUDENT_SYNTHETIC_TEST) ... ok
+test_f_backward_all_active_student_parameters (instance_B.tests.test_student.STUDENT_SYNTHETIC_TEST) ... ok
+test_g_detach_in_adapter_and_reject_attached_contract (instance_B.tests.test_student.STUDENT_SYNTHETIC_TEST) ... ok
+test_h_identical_xyz_confidence_scores (instance_B.tests.test_student.STUDENT_SYNTHETIC_TEST) ... ok
+test_i_xyz_normalization_near_zero_and_no_batch_mix (instance_B.tests.test_student.STUDENT_SYNTHETIC_TEST) ... ok
+test_j_hand_checked_flatten_and_filter (instance_B.tests.test_student.STUDENT_SYNTHETIC_TEST) ... ok
+test_k_mask_dot_scale_raw_logits (instance_B.tests.test_student.STUDENT_SYNTHETIC_TEST) ... ok
+test_l_eval_state_dict_save_reload (instance_B.tests.test_student.STUDENT_SYNTHETIC_TEST) ... ok
+test_m_missing_initialization_fails_closed (instance_B.tests.test_student.STUDENT_SYNTHETIC_TEST) ... ok
+test_n_reject_missing_or_wrong_dpt_weights (instance_B.tests.test_student.STUDENT_SYNTHETIC_TEST) ... ok
+test_o_tokens_order_extra_special_and_rgb (instance_B.tests.test_student.STUDENT_SYNTHETIC_TEST) ... ok
+test_p_default_config_and_memory_bound (instance_B.tests.test_student.STUDENT_SYNTHETIC_TEST) ... ok
+test_q_no_gt_teacher_dependency (instance_B.tests.test_student.STUDENT_SYNTHETIC_TEST) ... ok
+test_r_static_parser_rejects_executable_global (instance_B.tests.test_student.STUDENT_SYNTHETIC_TEST) ... ok
+test_s_attention_operates_only_on_queries (instance_B.tests.test_student.STUDENT_SYNTHETIC_TEST) ... ok
+test_01_student_small_backward (instance_B.tests.test_b02_integration.B02_INTEGRATION_TEST) ... ok
+test_02_contract_alignment_rejects_mismatch (instance_B.tests.test_b02_integration.B02_INTEGRATION_TEST) ... ok
+
+----------------------------------------------------------------------
+Ran 53 tests in 13.000s
+
+OK (skipped=1)
+
+TEST_SUMMARY {"tests_run": 53, "failures": 0, "errors": 0, "skips": 1, "seconds": 13.124208813533187}

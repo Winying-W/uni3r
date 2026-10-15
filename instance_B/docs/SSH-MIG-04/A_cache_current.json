@@ -1,0 +1,58 @@
+{
+  "status": "PASS_READABLE_HASH_AND_SHARED_SCHEMA",
+  "path": "/mnt/workspace/Jensen/project/3DGS/Uni3R/instance_A/results/M0_20261008_01/fixture.pt",
+  "bytes": 104123367,
+  "hashes": {
+    "fixture.pt": "351888091f93f3c6c2d651e08ef73aa593894a5152e773c3643a38eff9d85f54",
+    "metadata.json": "45d2c861a5fb1c6b956e41cd259be301e80d0131ac9cd0c1a4fa60f54c54ae78",
+    "source_manifest.json": "bd9f95492eaccefe38c0ee57974553081281d136b1f827e2a9c7e162f3c7cd2f"
+  },
+  "scene_id": [
+    "scene0686_01"
+  ],
+  "frame_ids": [
+    [
+      "000000.jpg",
+      "000020.jpg"
+    ]
+  ],
+  "purpose": "M0_DIAGNOSTIC_ONLY_NOT_FORMAL_TRAIN_OR_VAL",
+  "images_shape": [
+    1,
+    2,
+    3,
+    256,
+    256
+  ],
+  "token_shapes": {
+    "4": [
+      1,
+      2,
+      256,
+      2048
+    ],
+    "11": [
+      1,
+      2,
+      256,
+      2048
+    ],
+    "17": [
+      1,
+      2,
+      256,
+      2048
+    ],
+    "23": [
+      1,
+      2,
+      256,
+      2048
+    ]
+  },
+  "deserialization": "weights_only=True map_location=cpu",
+  "new_model_forward": false,
+  "online_A_export_rerun": false,
+  "external_source_paths_followed": false,
+  "historical_forward": "PASS in B-03 attempt_01/m0_probe/real_student_forward.json; not rerun this round"
+}

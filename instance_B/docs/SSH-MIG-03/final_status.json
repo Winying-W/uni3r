@@ -1,0 +1,23 @@
+{
+  "SSH_MIG_03_STATUS": "PASS_B02_CPU_REGRESSION",
+  "ENV_PATH": "/mnt/workspace/Jensen/project/3DGS/Uni3R/instance_B/.venv",
+  "PYTHON_VERSION": "3.10.21 (main, Aug 25 2026, 14:01:09) [Clang 22.1.3 ]",
+  "TORCH_VERSION": "2.1.0+cu121",
+  "CUDA_RUNTIME_VERSION": "12.1",
+  "NUMPY_VERSION": "1.26.4",
+  "SCIPY_VERSION": "1.15.3",
+  "PYTEST_VERSION": "8.3.5",
+  "DEPENDENCY_CHECK": "PASS: uv pip check; 18 compatible packages",
+  "B02_TEST_COLLECTED": 76,
+  "B02_PASS": 75,
+  "B02_SKIP": 1,
+  "B02_FAIL": 0,
+  "GPU_USED": "NO",
+  "SHARED_FILES_MODIFIED": "NO",
+  "GIT_STATUS_BEFORE_AFTER": "IDENTICAL existing dirty worktree; main 7a7f80205fb075228ff75aac43635b96de901110",
+  "CPU_READINESS": "B-02 original CPU regression passed",
+  "GPU_READINESS": "NOT_VERIFIED",
+  "BLOCKERS": [],
+  "REPORT_PATH": "/mnt/workspace/Jensen/project/3DGS/Uni3R/instance_B/docs/SSH-MIG-03/REPORT.md",
+  "NEXT_RECOMMENDATION": "STOP; await ChatGPT review. No GPU/training/A-C integration authorized."
+}

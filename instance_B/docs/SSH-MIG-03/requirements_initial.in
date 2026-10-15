@@ -1,0 +1,5 @@
+# B-02 CPU regression; CUDA wheel is installed but GPU computation is forbidden.
+torch @ https://download.pytorch.org/whl/cu121/torch-2.1.0%2Bcu121-cp310-cp310-linux_x86_64.whl
+numpy==1.26.4
+scipy==1.15.3
+pytest==8.3.5

@@ -26,8 +26,10 @@ torch.backends.cuda.matmul.allow_tf32 = True  # for gpu >= Ampere and pytorch >=
 from uni3r.uni3r import Uni3R
 # Dataset
 from uni3r.datasets.testdata import TestDataset  # noqa
+from uni3r.datasets.siu3r_test import SIU3RTestDataset  # noqa
 import dust3r.datasets
 dust3r.datasets.TestDataset = TestDataset
+dust3r.datasets.SIU3RTestDataset = SIU3RTestDataset
 # Loss
 from uni3r.loss import loss_of_one_batch  # noqa
 from uni3r.loss import TestLoss
@@ -52,14 +54,18 @@ def get_args_parser():
     parser.add_argument('--num_workers', default=8, type=int)
     parser.add_argument('--amp', type=int, default=0, choices=[0, 1], help="Use Automatic Mixed Precision")
     parser.add_argument('--print_freq', default=20, type=int, help='frequency to print infos while testing')
+    parser.add_argument('--max_batches', default=0, type=int,
+                        help='Limit evaluation for a smoke test; 0 evaluates the full dataset')
+    parser.add_argument('--shard_count', default=1, type=int)
+    parser.add_argument('--shard_index', default=0, type=int)
     
-    parser.add_argument('--max_batches', default=None, type=int, help='Limit batches for a smoke run; omit for full evaluation')
-
     # output directories
     parser.add_argument('--test_results_dir', default='./test_results/', type=str, help="path where to save the test results")
     return parser
 
 def main(args):
+    if args.shard_count < 1 or not 0 <= args.shard_index < args.shard_count:
+        raise ValueError('Invalid evaluation shard')
     misc.init_distributed_mode(args)
 
     print("test_results_dir: "+args.test_results_dir)
@@ -73,7 +79,8 @@ def main(args):
     
     # Build test dataset
     print('Building test dataset {:s}'.format(args.test_dataset))
-    data_loader_test = {dataset.split('(')[0]: build_dataset(dataset, args.batch_size, args.num_workers, test=True)
+    data_loader_test = {dataset.split('(')[0]: build_dataset(dataset, args.batch_size, args.num_workers, test=True,
+                                                          shard_count=args.shard_count, shard_index=args.shard_index)
                         for dataset in args.test_dataset.split('+')}
 
     # Load model and criterion
@@ -100,7 +107,17 @@ def main(args):
                              device, 1, args=args, prefix=test_name)
         test_stats[test_name] = stats
 
-def build_dataset(dataset, batch_size, num_workers, test=False):
+    if args.test_results_dir:
+        report = {'checkpoint': args.pretrained, 'dataset': args.test_dataset,
+                  'criterion': args.test_criterion, 'max_batches': args.max_batches,
+                  'shard_count': args.shard_count, 'shard_index': args.shard_index,
+                  'metrics': test_stats}
+        # Keep the remote report tools' flat schema alongside local shard data.
+        if len(test_stats) == 1:
+            report.update(next(iter(test_stats.values())))
+        (Path(args.test_results_dir) / 'metrics.json').write_text(json.dumps(report, indent=2))
+
+def build_dataset(dataset, batch_size, num_workers, test=False, shard_count=1, shard_index=0):
     split = ['Train', 'Test'][test]
     print(f'Building {split} Data loader for dataset: ', dataset)
     loader = get_data_loader(dataset,
@@ -109,6 +126,11 @@ def build_dataset(dataset, batch_size, num_workers, test=False):
                              pin_mem=True,
                              shuffle=not (test),
                              drop_last=not (test))
+    if shard_count > 1:
+        indices = list(range(shard_index, len(loader.dataset), shard_count))
+        loader = torch.utils.data.DataLoader(
+            torch.utils.data.Subset(loader.dataset, indices), batch_size=batch_size,
+            num_workers=num_workers, pin_memory=True, shuffle=False, drop_last=False)
 
     print(f"{split} dataset length: ", len(loader))
     return loader
@@ -132,9 +154,10 @@ def test_one_epoch(model: torch.nn.Module, criterion: torch.nn.Module,
         data_loader.sampler.set_epoch(1) # 1 is a dummy value
 
     total_time = []
+    per_sample = []
     processed_batches = 0
     for batch_id, batch in enumerate(metric_logger.log_every(data_loader, args.print_freq, header)):
-        if args.max_batches is not None and batch_id >= args.max_batches:
+        if args.max_batches > 0 and batch_id >= args.max_batches:
             break
         processed_batches += 1
         res = loss_of_one_batch(batch, model, criterion, device,
@@ -143,6 +166,10 @@ def test_one_epoch(model: torch.nn.Module, criterion: torch.nn.Module,
                                        total_time=total_time)
         loss_tuple = res['loss']
         loss_value, loss_details = loss_tuple  # criterion returns two values
+        per_sample.append({
+            'scene': batch[-1]['label'][0], 'frames': [v['instance'][0] for v in batch],
+            'mse': getattr(criterion, 'last_sample_mse', None),
+            'lpips': criterion.lpips_scores[-1] if criterion.lpips_scores else None})
 
         # results = loss_details.pop('results')
         metric_logger.update(loss=float(loss_value), **loss_details)
@@ -153,37 +180,6 @@ def test_one_epoch(model: torch.nn.Module, criterion: torch.nn.Module,
     print('mIoU: ', criterion.miou.compute(), criterion.miou.compute().mean())
     print('Acc: ', criterion.accuracy.compute())
     print('Depth Metrics: ', criterion.depth_metric.compute())
-
-    def serializable(value):
-        if isinstance(value, torch.Tensor):
-            return value.detach().cpu().tolist()
-        if isinstance(value, dict):
-            return {k: serializable(v) for k, v in value.items()}
-        return value
-
-    metrics = {
-        'psnr': criterion.psnr.compute(),
-        'ssim': criterion.ssim.compute(),
-        'lpips': criterion.compute_lpips_mean(),
-        'iou': criterion.miou.compute(),
-        'miou': criterion.miou.compute().mean(),
-        'accuracy': criterion.accuracy.compute(),
-        'depth': criterion.depth_metric.compute(),
-        'num_batches': processed_batches,
-        'total_batches': len(data_loader),
-        'smoke_run': args.max_batches is not None,
-        'fast_pose_alignment': criterion.fast_pose_alignment,
-        'pose_align_steps': criterion.pose_align_steps,
-        'dataset': args.test_dataset,
-        'checkpoint': args.pretrained,
-        'scene_count': len(data_loader.dataset.scenes),
-        'input_views': data_loader.dataset.num_views,
-        'model_forward_seconds_mean': sum(total_time) / len(total_time) if total_time else None,
-        'timing_samples': len(total_time),
-        'gpu': torch.cuda.get_device_name(device),
-    }
-    with open(Path(args.test_results_dir) / 'metrics.json', 'w') as f:
-        json.dump(serializable(metrics), f, indent=2)
 
     sum_time = 0.0
     avg_time = 0.0
@@ -199,6 +195,43 @@ def test_one_epoch(model: torch.nn.Module, criterion: torch.nn.Module,
 
     aggs = [('avg', 'global_avg'), ('med', 'median')]
     results = {f'{k}_{tag}': getattr(meter, attr) for k, meter in metric_logger.meters.items() for tag, attr in aggs}
+    source_dataset = data_loader.dataset
+    while isinstance(source_dataset, torch.utils.data.Subset):
+        source_dataset = source_dataset.dataset
+    def to_json(value):
+        if isinstance(value, torch.Tensor):
+            return value.detach().cpu().tolist()
+        if isinstance(value, dict):
+            return {key: to_json(val) for key, val in value.items()}
+        return value
+    results.update(to_json({
+        'psnr': criterion.psnr.compute(), 'ssim': criterion.ssim.compute(),
+        'lpips': criterion.compute_lpips_mean(), 'iou_per_class': criterion.miou.compute(),
+        'miou': criterion.miou.compute().mean(), 'accuracy': criterion.accuracy.compute(),
+        'depth': criterion.depth_metric.compute(), 'average_inference_seconds': avg_time,
+        'iou': criterion.miou.compute(),
+        'num_batches': processed_batches, 'total_batches': len(data_loader),
+        'smoke_run': args.max_batches > 0,
+        'fast_pose_alignment': criterion.fast_pose_alignment,
+        'pose_align_steps': criterion.pose_align_steps,
+        'dataset': args.test_dataset, 'checkpoint': args.pretrained,
+        'scene_count': len(source_dataset.scenes), 'input_views': source_dataset.num_views,
+        'model_forward_seconds_mean': avg_time if total_time else None,
+        'timing_samples': len(total_time),
+        'gpu': torch.cuda.get_device_name(device) if device.type == 'cuda' else 'cpu',
+    }))
+    if args.test_results_dir:
+        (Path(args.test_results_dir) / f'{prefix}_per_sample.json').write_text(json.dumps(per_sample))
+        metrics = {name: getattr(criterion, name) for name in ('psnr', 'ssim', 'miou', 'accuracy', 'depth_metric')}
+        states = {name: {key: getattr(metric, key).detach().cpu()
+                         for key in metric._defaults} for name, metric in metrics.items()}
+        indices = (list(data_loader.dataset.indices) if isinstance(data_loader.dataset, torch.utils.data.Subset)
+                   else list(range(len(data_loader.dataset))))
+        if args.max_batches:
+            indices = indices[:args.max_batches * args.batch_size]
+        torch.save({'states': states, 'updates': {name: metric._update_count for name, metric in metrics.items()},
+                    'lpips_scores': criterion.lpips_scores, 'inference_times': total_time,
+                    'sample_indices': indices}, Path(args.test_results_dir) / f'{prefix}_metric_states.pt')
 
     if log_writer is not None:
         for name, val in results.items():

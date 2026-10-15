@@ -1,0 +1,18 @@
+{
+  "test_matcher": {
+    "PASS": 9
+  },
+  "test_criterion": {
+    "PASS": 14
+  },
+  "test_contracts": {
+    "PASS": 31,
+    "SKIP": 1
+  },
+  "test_student": {
+    "PASS": 19
+  },
+  "test_b02_integration": {
+    "PASS": 2
+  }
+}

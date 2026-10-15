@@ -1,0 +1,17 @@
+{
+  "branch": "main",
+  "head": "7a7f80205fb075228ff75aac43635b96de901110",
+  "git_status": "M .gitignore\n M reproduce/compare_metrics.py\n M scripts/test.sh\n M scripts/test_16views.sh\n M scripts/test_8views.sh\n M scripts/train.sh\n m submodules/diff-gaussian-rasterization\n m submodules/lang_seg\n M test.py\n M uni3r/loss.py\n M uni3r/lseg.py\n M uni3r/utils/path_manager.py\n?? AUTHOR_DATASETS.md\n?? MERGE_REPORT.md\n?? REPRODUCTION.md\n?? instance_A/\n?? instance_B/\n?? requirements-renderpy.txt\n?? requirements-reproduction.lock.txt\n?? requirements-reproduction.txt\n?? scripts/build_renderpy_local.sh\n?? scripts/download_hf_training_data.py\n?? scripts/download_reproduction.py\n?? scripts/env.sh\n?? scripts/env_render.sh\n?? scripts/evaluate_local.sh\n?? scripts/evaluate_sharded.sh\n?? scripts/export_instance_cache.py\n?? scripts/fetch_scannet_intrinsics.py\n?? scripts/install_environment.sh\n?? scripts/merge_evaluation.py\n?? scripts/prepare_scannet_hf.py\n?? scripts/prepare_scannetpp_hf.py\n?? scripts/render_author_scannetpp.yml\n?? scripts/train_local.sh\n?? scripts/train_smoke.py\n?? scripts/verify_author_renderer.py\n?? scripts/verify_data.py\n?? uni3r/instance/",
+  "unexpected_changes": [],
+  "ledger_append_only": true,
+  "new_ledger_calls": [
+    6,
+    7,
+    8
+  ],
+  "physical_calls_after": 8,
+  "old_B_artifacts_checked": 200,
+  "shared_files_checked": 242,
+  "A_artifacts_checked": 4,
+  "git_state_identical": true
+}

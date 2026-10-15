@@ -1,0 +1,74 @@
+{
+  "status": "PASS",
+  "before_counters": {
+    "global_update_step": 1,
+    "seen_scenes": 4,
+    "skipped_scenes": 1,
+    "data_cursor": 4,
+    "window_cursor": 1,
+    "failed_windows": 0
+  },
+  "after_counters": {
+    "global_update_step": 1,
+    "seen_scenes": 6,
+    "skipped_scenes": 3,
+    "data_cursor": 6,
+    "window_cursor": 2,
+    "failed_windows": 0
+  },
+  "parameters_buffers_optimizer_LR_RNG_unchanged": true,
+  "optimizer_calls_unchanged": true,
+  "report": {
+    "M": 0,
+    "O": 0,
+    "micro_scenes": [
+      {
+        "micro_index": 0,
+        "scene_id": "SYNTHETIC_B03_I_0",
+        "frame_ids": [
+          "SYNTHETIC_frame_0",
+          "SYNTHETIC_frame_1"
+        ],
+        "K": 0,
+        "S": 0.0,
+        "mask_active": 0,
+        "objectness_active": 0,
+        "gt_set_exhaustive": true,
+        "negative_supervision_enabled": false,
+        "excluded_zero_support_ids": []
+      },
+      {
+        "micro_index": 1,
+        "scene_id": "SYNTHETIC_B03_I_1",
+        "frame_ids": [
+          "SYNTHETIC_frame_0",
+          "SYNTHETIC_frame_1"
+        ],
+        "K": 0,
+        "S": 1104.0000048279762,
+        "mask_active": 0,
+        "objectness_active": 0,
+        "gt_set_exhaustive": false,
+        "negative_supervision_enabled": false,
+        "excluded_zero_support_ids": []
+      }
+    ],
+    "scene_count": 2,
+    "losses": {
+      "loss_bce": 0.0,
+      "loss_dice": 0.0,
+      "loss_objectness": 0.0,
+      "loss_total": 0.0
+    },
+    "forward_count": 0,
+    "status": "NO_SUPERVISION",
+    "state": {
+      "global_update_step": 1,
+      "seen_scenes": 6,
+      "skipped_scenes": 3,
+      "data_cursor": 6,
+      "window_cursor": 2,
+      "failed_windows": 0
+    }
+  }
+}

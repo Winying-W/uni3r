@@ -1,0 +1,12 @@
+Using Python 3.10.21 environment at: instance_B/.venv
+Resolved 18 packages in 495ms
+Prepared 8 packages in 20.66s
+Installed 8 packages in 55.36s
+ + filelock==4.0.10
+ + fsspec==2026.9.0
+ + jinja2==3.1.6
+ + markupsafe==2.1.5
+ + mpmath==1.3.0
+ + networkx==3.4.2
+ + sympy==1.14.0
+ + triton==2.1.0

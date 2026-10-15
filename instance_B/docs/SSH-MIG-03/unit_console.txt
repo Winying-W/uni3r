@@ -1,0 +1,30 @@
+test_01_global_optimum_not_greedy (instance_B.tests.test_matcher.MATCHER_TEST) ... ok
+test_02_rectangular_exhaustive (instance_B.tests.test_matcher.MATCHER_TEST) ... ok
+test_03_dense_matrices_and_chunks (instance_B.tests.test_matcher.MATCHER_TEST) ... ok
+test_04_unique_id_and_query_equivariance (instance_B.tests.test_matcher.MATCHER_TEST) ... ok
+test_05_single_view_object_and_zero_support (instance_B.tests.test_matcher.MATCHER_TEST) ... ok
+test_06_capacity_context_and_k_equals_q (instance_B.tests.test_matcher.MATCHER_TEST) ... ok
+test_07_label_source_rejection (instance_B.tests.test_matcher.MATCHER_TEST) ... ok
+test_08_invalid_predictions_and_targets (instance_B.tests.test_matcher.MATCHER_TEST) ... ok
+test_09_empty_solver_and_match (instance_B.tests.test_matcher.MATCHER_TEST) ... ok
+test_01_hand_computed (instance_B.tests.test_criterion.CRITERION_TEST) ... ok
+test_02_empty_exhaustive_background (instance_B.tests.test_criterion.CRITERION_TEST) ... ok
+test_03_confidence_relative_once (instance_B.tests.test_criterion.CRITERION_TEST) ... ok
+test_04_ignore_invalid_zero_confidence_gradients (instance_B.tests.test_criterion.CRITERION_TEST) ... ok
+test_05_cross_view_id_switch_penalty (instance_B.tests.test_criterion.CRITERION_TEST) ... ok
+test_06_global_id_and_view_permutation_invariance (instance_B.tests.test_criterion.CRITERION_TEST) ... ok
+test_07_exhaustiveness_branches (instance_B.tests.test_criterion.CRITERION_TEST) ... ok
+test_08_default_partial_and_bool_validation (instance_B.tests.test_criterion.CRITERION_TEST) ... ok
+test_09_batch_isolation_and_permutation (instance_B.tests.test_criterion.CRITERION_TEST) ... ok
+test_10_ignore_append_and_duplicate_do_not_dilute (instance_B.tests.test_criterion.CRITERION_TEST) ... ok
+test_11_extreme_logits_and_tiny_positive_confidence (instance_B.tests.test_criterion.CRITERION_TEST) ... ok
+test_12_dense_loss_and_gradient_parity (instance_B.tests.test_criterion.CRITERION_TEST) ... ok
+test_13_fixed_assignment_gradcheck (instance_B.tests.test_criterion.CRITERION_TEST) ... ok
+test_14_single_view_visibility_negative_other_view (instance_B.tests.test_criterion.CRITERION_TEST) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 3.188s
+
+OK
+
+TEST_SUMMARY {"tests_run": 23, "failures": 0, "errors": 0, "skips": 0, "seconds": 3.2026050286367536}

@@ -1,0 +1,8 @@
+{
+  "version": "0.12.7",
+  "metadata_url": "https://pypi.org/pypi/uv/0.12.7/json",
+  "url": "https://files.pythonhosted.org/packages/8a/01/616cc5f80952eef6fa48c5dbd6ea8aeed04a494e7dfbe9f5f65cfcf85ad9/uv-0.12.7-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+  "sha256": "4545e87c7ac64af317d8daffd279e23e93b0e05035662363033d3525923339d2",
+  "size": 20058968,
+  "method": "official PyPI wheel, ranged transfer, SHA256 verified before execution"
+}

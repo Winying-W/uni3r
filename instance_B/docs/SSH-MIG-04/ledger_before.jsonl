@@ -1,0 +1,16 @@
+{"event": "HEADER", "work_package": "B-03", "limit": 8, "checkpoint_independent": true}
+{"event": "RESERVED", "call_id": 1, "context": {"purpose": "SYNTHETIC_ENGINE_DIAGNOSTIC_NOT_FOR_REAL_TRAINING", "window_label": "CONTINUOUS_W1", "logical_update_before": 0, "data_cursor": 0}, "time_ns": 1791469293322067599}
+{"event": "CALLING", "call_id": 1, "time_ns": 1791469293324916271}
+{"event": "SUCCEEDED", "call_id": 1, "time_ns": 1791469293525532889}
+{"event": "RESERVED", "call_id": 2, "context": {"purpose": "SYNTHETIC_ENGINE_DIAGNOSTIC_NOT_FOR_REAL_TRAINING", "window_label": "CONTINUOUS_W2", "logical_update_before": 1, "data_cursor": 6}, "time_ns": 1791469305759976080}
+{"event": "CALLING", "call_id": 2, "time_ns": 1791469305762103575}
+{"event": "SUCCEEDED", "call_id": 2, "time_ns": 1791469305958621931}
+{"event": "RESERVED", "call_id": 3, "context": {"purpose": "SYNTHETIC_ENGINE_DIAGNOSTIC_NOT_FOR_REAL_TRAINING", "window_label": "CONTINUOUS_W3", "logical_update_before": 2, "data_cursor": 8}, "time_ns": 1791469306894362460}
+{"event": "CALLING", "call_id": 3, "time_ns": 1791469306896707982}
+{"event": "SUCCEEDED", "call_id": 3, "time_ns": 1791469307111314249}
+{"event": "RESERVED", "call_id": 4, "context": {"purpose": "SYNTHETIC_ENGINE_DIAGNOSTIC_NOT_FOR_REAL_TRAINING", "window_label": "RESUMED_W2", "logical_update_before": 1, "data_cursor": 6}, "time_ns": 1791469311353631005}
+{"event": "CALLING", "call_id": 4, "time_ns": 1791469311355585859}
+{"event": "SUCCEEDED", "call_id": 4, "time_ns": 1791469311499633992}
+{"event": "RESERVED", "call_id": 5, "context": {"purpose": "SYNTHETIC_ENGINE_DIAGNOSTIC_NOT_FOR_REAL_TRAINING", "window_label": "RESUMED_W3", "logical_update_before": 2, "data_cursor": 8}, "time_ns": 1791469312313045187}
+{"event": "CALLING", "call_id": 5, "time_ns": 1791469312315023196}
+{"event": "SUCCEEDED", "call_id": 5, "time_ns": 1791469312484600402}

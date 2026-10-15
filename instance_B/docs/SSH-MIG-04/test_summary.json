@@ -1,0 +1,390 @@
+{
+  "suites": {
+    "regression": {
+      "tests_run": 76,
+      "failures": 0,
+      "errors": 0,
+      "skips": 1,
+      "seconds": 13.420923050493002,
+      "same_historical_test_ids": true
+    },
+    "training_tests": {
+      "tests_run": 8,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "seconds": 17.345327348448336,
+      "same_historical_test_ids": true
+    },
+    "checkpoint_tests": {
+      "tests_run": 4,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "seconds": 8.463224662467837,
+      "same_historical_test_ids": true
+    }
+  },
+  "collected": 88,
+  "PASS": 87,
+  "SKIP": 1,
+  "FAIL": 0,
+  "records": [
+    {
+      "test": "instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST.test_confidence_range_and_fractional_weights",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST.test_default_target_dimensions_q100",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST.test_detached_inputs_required",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST.test_empty_background_and_all_ignore_scenes",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST.test_frame_scene_and_batch_alignment",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST.test_gaussian_filter_duplicates_dtype_and_empty",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST.test_gaussian_filter_mapping",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST.test_geometry_confidence_is_not_label_probability",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST.test_id_rules_background_and_unknown",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST.test_ignored_nan_not_hidden",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST.test_input_shapes_rejected",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST.test_invalid_pixel_must_have_zero_weight",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST.test_invalid_positive_and_zero_weight_ids_omitted",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST.test_logits_allow_negative_and_greater_than_one_and_grad",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST.test_metadata_crop_and_normalization",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST.test_metadata_dtype_and_special_tokens",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST.test_missing_metadata_precise_errors",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST.test_nan_inf_rejected",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST.test_no_input_mutation",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST.test_opaque_gaussian_payload_finiteness",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST.test_prediction_nan_and_integer_dtype",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST.test_prediction_shapes_and_flexible_query_count",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST.test_real_provenance_validation_negative_only",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST.test_required_dtypes",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST.test_scene_local_ids_not_batch_global",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST.test_scene_union_and_single_view_visibility",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST.test_special_token_shape_and_layer_keys",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST.test_synthetic_cannot_claim_real_checkpoint",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST.test_unknown_cannot_be_valid",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST.test_valid_small_batch",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_contracts.CONTRACT_SYNTHETIC_TEST.test_version_and_status",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_contracts.REAL_UNI3R_FIXTURE_TEST.test_real_fixture_not_available",
+      "status": "SKIP",
+      "reason": "NOT RUN: A has not supplied a real feature fixture inside the authorized root; replace this placeholder when integration is authorized"
+    },
+    {
+      "test": "instance_B.tests.test_student.STUDENT_SYNTHETIC_TEST.test_a_dpt_init_complete_and_independent_storage",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_student.STUDENT_SYNTHETIC_TEST.test_b_DPT_ADAPTER_SYNTHETIC_PARITY",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_student.STUDENT_SYNTHETIC_TEST.test_c_shapes_dtype_finite_b2",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_student.STUDENT_SYNTHETIC_TEST.test_d_variable_q",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_student.STUDENT_SYNTHETIC_TEST.test_e_scene_independence",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_student.STUDENT_SYNTHETIC_TEST.test_f_backward_all_active_student_parameters",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_student.STUDENT_SYNTHETIC_TEST.test_g_detach_in_adapter_and_reject_attached_contract",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_student.STUDENT_SYNTHETIC_TEST.test_h_identical_xyz_confidence_scores",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_student.STUDENT_SYNTHETIC_TEST.test_i_xyz_normalization_near_zero_and_no_batch_mix",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_student.STUDENT_SYNTHETIC_TEST.test_j_hand_checked_flatten_and_filter",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_student.STUDENT_SYNTHETIC_TEST.test_k_mask_dot_scale_raw_logits",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_student.STUDENT_SYNTHETIC_TEST.test_l_eval_state_dict_save_reload",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_student.STUDENT_SYNTHETIC_TEST.test_m_missing_initialization_fails_closed",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_student.STUDENT_SYNTHETIC_TEST.test_n_reject_missing_or_wrong_dpt_weights",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_student.STUDENT_SYNTHETIC_TEST.test_o_tokens_order_extra_special_and_rgb",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_student.STUDENT_SYNTHETIC_TEST.test_p_default_config_and_memory_bound",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_student.STUDENT_SYNTHETIC_TEST.test_q_no_gt_teacher_dependency",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_student.STUDENT_SYNTHETIC_TEST.test_r_static_parser_rejects_executable_global",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_student.STUDENT_SYNTHETIC_TEST.test_s_attention_operates_only_on_queries",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_matcher.MATCHER_TEST.test_01_global_optimum_not_greedy",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_matcher.MATCHER_TEST.test_02_rectangular_exhaustive",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_matcher.MATCHER_TEST.test_03_dense_matrices_and_chunks",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_matcher.MATCHER_TEST.test_04_unique_id_and_query_equivariance",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_matcher.MATCHER_TEST.test_05_single_view_object_and_zero_support",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_matcher.MATCHER_TEST.test_06_capacity_context_and_k_equals_q",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_matcher.MATCHER_TEST.test_07_label_source_rejection",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_matcher.MATCHER_TEST.test_08_invalid_predictions_and_targets",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_matcher.MATCHER_TEST.test_09_empty_solver_and_match",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_criterion.CRITERION_TEST.test_01_hand_computed",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_criterion.CRITERION_TEST.test_02_empty_exhaustive_background",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_criterion.CRITERION_TEST.test_03_confidence_relative_once",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_criterion.CRITERION_TEST.test_04_ignore_invalid_zero_confidence_gradients",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_criterion.CRITERION_TEST.test_05_cross_view_id_switch_penalty",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_criterion.CRITERION_TEST.test_06_global_id_and_view_permutation_invariance",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_criterion.CRITERION_TEST.test_07_exhaustiveness_branches",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_criterion.CRITERION_TEST.test_08_default_partial_and_bool_validation",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_criterion.CRITERION_TEST.test_09_batch_isolation_and_permutation",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_criterion.CRITERION_TEST.test_10_ignore_append_and_duplicate_do_not_dilute",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_criterion.CRITERION_TEST.test_11_extreme_logits_and_tiny_positive_confidence",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_criterion.CRITERION_TEST.test_12_dense_loss_and_gradient_parity",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_criterion.CRITERION_TEST.test_13_fixed_assignment_gradcheck",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_criterion.CRITERION_TEST.test_14_single_view_visibility_negative_other_view",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_b02_integration.B02_INTEGRATION_TEST.test_01_student_small_backward",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_b02_integration.B02_INTEGRATION_TEST.test_02_contract_alignment_rejects_mismatch",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_training.TRAINING_TEST.test_01_parameter_groups",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_training.TRAINING_TEST.test_02_four_scene_accumulation_reference",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_training.TRAINING_TEST.test_03_tail_window_and_background_denominator",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_training.TRAINING_TEST.test_04_append_ignore_not_diluted",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_training.TRAINING_TEST.test_05_unsupervised_before_forward",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_training.TRAINING_TEST.test_06_contract_capacity_order_and_pseudo_errors",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_training.TRAINING_TEST.test_07_nonfinite_loss_and_gradient_no_step",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_training.TRAINING_TEST.test_08_gating_and_numerical_zero_not_skip",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_checkpointing.CHECKPOINT_TEST.test_01_payload_complete_and_purpose_isolated",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_checkpointing.CHECKPOINT_TEST.test_02_invalid_payloads_do_not_mutate_live_engine",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_checkpointing.CHECKPOINT_TEST.test_03_truncated_and_bad_receipt",
+      "status": "PASS"
+    },
+    {
+      "test": "instance_B.tests.test_checkpointing.CHECKPOINT_TEST.test_04_no_overwrite_and_boundary_only",
+      "status": "PASS"
+    }
+  ],
+  "new_synthetic_CPU_optimizer_calls": 3,
+  "real_data_optimizer_calls": 0,
+  "GPU_USED": "NO"
+}

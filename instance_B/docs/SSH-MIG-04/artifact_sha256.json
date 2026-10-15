@@ -1,0 +1,158 @@
+{
+  "instance_B/docs/SSH-MIG-04/RUN_SCOPE.md": {
+    "bytes": 673,
+    "sha256": "3010c2d7cad3249530f237bddb2a19af7747afcad90e5dd2ef8c7910478a750f"
+  },
+  "instance_B/docs/SSH-MIG-04/legacy_checkpoint_compatibility.json": {
+    "bytes": 805,
+    "sha256": "e6e8b85460ad96e86249f3f9c331698d1d94cc3802d1764be6fea95da0f1c8c1"
+  },
+  "instance_B/docs/SSH-MIG-04/existing_modules.json": {
+    "bytes": 752,
+    "sha256": "97543809dbac7dbf5257c6cabf8c208ad024c1484bb38ecb67beb71a967ba8c5"
+  },
+  "instance_B/docs/SSH-MIG-04/environment.json": {
+    "bytes": 1000,
+    "sha256": "4ca25bfa6c1f7b758d89712c369eb51730078f25ad06e93cf2ad066448170cca"
+  },
+  "instance_B/docs/SSH-MIG-04/test_summary.json": {
+    "bytes": 13493,
+    "sha256": "5faee806dcf006f6e9f8cc61ac5a2f48f1af9f94244a17bb9c7f68817835eb17"
+  },
+  "instance_B/docs/SSH-MIG-04/C_current.json": {
+    "bytes": 833,
+    "sha256": "f054891df01e20a75b89759decd94313cd271cb50b3a7480e6953eb3121052a0"
+  },
+  "instance_B/docs/SSH-MIG-04/ledger_before.jsonl": {
+    "bytes": 1882,
+    "sha256": "844bb1b22e398316fbfee54c06daaf90d1816dd4f033c6a6287402efafc16690"
+  },
+  "instance_B/docs/SSH-MIG-04/scope.json": {
+    "bytes": 482,
+    "sha256": "a9125f3e1b7e783c0e533d5e906149e140fb091296299cf3cb865a2b1e472d6a"
+  },
+  "instance_B/docs/SSH-MIG-04/W1_update.json": {
+    "bytes": 7697,
+    "sha256": "4e860835e77b5e0c33c1a81cdea564e4c6563d6543003edb17cc4373abe0f93b"
+  },
+  "instance_B/docs/SSH-MIG-04/A_cache_current.json": {
+    "bytes": 1233,
+    "sha256": "07d5a3622d300c2257f92426ce029402e964f2005d5b667d91260ba496caea9a"
+  },
+  "instance_B/docs/SSH-MIG-04/checkpoint_recovery.json": {
+    "bytes": 1038,
+    "sha256": "1fc996407fe75e704cbeef6861e1bf4743f995f07c49c256f23e840faaa8c0c9"
+  },
+  "instance_B/docs/SSH-MIG-04/run_mig04.py": {
+    "bytes": 10206,
+    "sha256": "3381fd2d877d70db8124138cce0b692e60fafc3a2985613e408b242316c06720"
+  },
+  "instance_B/docs/SSH-MIG-04/audit_before.json": {
+    "bytes": 74732,
+    "sha256": "75a6e59628414911898229a563fa18cf87730541f93aff4baaa1e03ef3a7e58f"
+  },
+  "instance_B/docs/SSH-MIG-04/skip_after_moments.json": {
+    "bytes": 1718,
+    "sha256": "11663e718f4851970d0e210129518a41a45731701d77419af1f31a193fe62852"
+  },
+  "instance_B/docs/SSH-MIG-04/commands.sh": {
+    "bytes": 436,
+    "sha256": "ec05d0353ebfcf0811c50ed8792f124e901ae146b23c64d92dc54734281f0285"
+  },
+  "instance_B/docs/SSH-MIG-04/REPORT.md": {
+    "bytes": 17187,
+    "sha256": "ff958d89392712d278f36b70aac437437728fa1e1303e4a5b342ea88ea5bc2ef"
+  },
+  "instance_B/docs/SSH-MIG-04/console.txt": {
+    "bytes": 1074,
+    "sha256": "a5e8595cedeea7d86688c1e54b63b6e09e83e21a53ae9e636ac1888fb95ce7e7"
+  },
+  "instance_B/docs/SSH-MIG-04/final_status.json": {
+    "bytes": 1511,
+    "sha256": "2d9d27ae838acfe5ad9459828e3b1536d5de2f42a6c3b887b85f3c6b058109e6"
+  },
+  "instance_B/docs/SSH-MIG-04/audit_after.json": {
+    "bytes": 1457,
+    "sha256": "669272401415fd89f0d56ac830403fdcab4370bf27832962a4688afbbb839d39"
+  },
+  "instance_B/results/B-03/SSH-MIG-04/attempt_01/synthetic_migration_W1.pt.receipt.json": {
+    "bytes": 8708,
+    "sha256": "3121331d40f955b1ceac5e45d7dfd6fe1f5fecd5b0d95428317e0e78318253c0"
+  },
+  "instance_B/results/B-03/SSH-MIG-04/attempt_01/training_tests_test_training_evidence.json": {
+    "bytes": 29221,
+    "sha256": "877f49d3d361e108cd8ca525c338edfd1e1ae26caeda2aed8fcf18346d4be4bd"
+  },
+  "instance_B/results/B-03/SSH-MIG-04/attempt_01/regression_stdout.txt": {
+    "bytes": 7800,
+    "sha256": "3ed497e5f1dc82eae13ab7a76af4ee608126a6bef2c8df63ca251546a295ad53"
+  },
+  "instance_B/results/B-03/SSH-MIG-04/attempt_01/regression_test_criterion_evidence.json": {
+    "bytes": 15055,
+    "sha256": "dbdff9c7299d90ef08a02c0ef175b525a23456acdb726b4cc82e166b72379d32"
+  },
+  "instance_B/results/B-03/SSH-MIG-04/attempt_01/truncated_diagnostic.pt": {
+    "bytes": 13,
+    "sha256": "77cb5829e737b17f25469125f86104ffcae2832821c277dd032e7ce75d6a1462"
+  },
+  "instance_B/results/B-03/SSH-MIG-04/attempt_01/checkpoint_tests_test_checkpointing_evidence.json": {
+    "bytes": 3674,
+    "sha256": "770aadb2bae45b17a3fedbe6adf30758f1812364aa3bd85f1cfbb1ff492f8121"
+  },
+  "instance_B/results/B-03/SSH-MIG-04/attempt_01/checkpoint_tests_results.json": {
+    "bytes": 743,
+    "sha256": "de8d6f9ae8ce08da38bcaafba3b1e08e0ddae1185140c220a66669ae59944a51"
+  },
+  "instance_B/results/B-03/SSH-MIG-04/attempt_01/checkpoint_tests_stdout.txt": {
+    "bytes": 512,
+    "sha256": "8fecfde74adbbb168051ede8514fff524c29d138636ef2aeed755cbe9d06f60e"
+  },
+  "instance_B/results/B-03/SSH-MIG-04/attempt_01/training_test_events.jsonl": {
+    "bytes": 2534,
+    "sha256": "4c441ed91e527e61e07f62aaccee5f7168cfd75df4469e9a6152b389af3f566b"
+  },
+  "instance_B/results/B-03/SSH-MIG-04/attempt_01/training_tests_results.json": {
+    "bytes": 1259,
+    "sha256": "33c51a2962fa0733f1d91cefff75dae8069fc85bc48a406ae04e051c358a967e"
+  },
+  "instance_B/results/B-03/SSH-MIG-04/attempt_01/regression_test_matcher_evidence.json": {
+    "bytes": 15625,
+    "sha256": "6e9307023b6311e7bb6bcc2145dcb6465c2250778c149c8ab980f15f04af8dec"
+  },
+  "instance_B/results/B-03/SSH-MIG-04/attempt_01/resumed_events.jsonl": {
+    "bytes": 6374,
+    "sha256": "6fefd6b16584b9d466260d7b5d5fe4ed5b56eec6a3785131ae55f0d023aa0a55"
+  },
+  "instance_B/results/B-03/SSH-MIG-04/attempt_01/regression_results.json": {
+    "bytes": 11199,
+    "sha256": "d49af42d965d7a858eb49101975dabd900ff3f75ad4c08689272e6ad79931e81"
+  },
+  "instance_B/results/B-03/SSH-MIG-04/attempt_01/continuous_events.jsonl": {
+    "bytes": 12541,
+    "sha256": "5ee3f5ea88bc9a3ccfad686256cd25d9677a0c4e7cf2d376b7448e8f0ad72341"
+  },
+  "instance_B/results/B-03/SSH-MIG-04/attempt_01/bad_hash_receipt.json": {
+    "bytes": 8708,
+    "sha256": "d20f0c828f4f3353e89e2f26db09ac76cf82b2df81d58548563e983462d0639a"
+  },
+  "instance_B/results/B-03/SSH-MIG-04/attempt_01/regression_test_b02_integration_evidence.json": {
+    "bytes": 27451,
+    "sha256": "2df046560ea8616c59cc0dc86f86d871513d4ae7bf9f1152fe4328ed7a0fea42"
+  },
+  "instance_B/results/B-03/SSH-MIG-04/attempt_01/truncated_receipt.json": {
+    "bytes": 8699,
+    "sha256": "c82338ad00eadc7085f6313c0121a0a3374f50c843ae0560ff8fd8c345320dba"
+  },
+  "instance_B/results/B-03/SSH-MIG-04/attempt_01/regression_test_student_evidence.json": {
+    "bytes": 2099,
+    "sha256": "501ddb69c0721cbb0e14c6d15fb15343d43128a9c88c50a9c1f2be39ed31a970"
+  },
+  "instance_B/results/B-03/SSH-MIG-04/attempt_01/training_tests_stdout.txt": {
+    "bytes": 852,
+    "sha256": "12a85ef83c5c3e2a5c7bd9ae31b486c8397efeaf7aa7c26fa7ebbab1d8ac6e91"
+  },
+  "instance_B/docs/SSH-MIG-04/file_changes.json": {
+    "bytes": 5126,
+    "sha256": "3094876fc33f17aaaf1264e5b9b97055bd6b78eb6ba8576f50b387a4145a73fe"
+  }
+}

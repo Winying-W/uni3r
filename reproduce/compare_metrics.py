@@ -11,7 +11,8 @@ refs = {2: {'psnr':25.53, 'ssim':.8727, 'lpips':.1380, 'miou':.5584, 'accuracy':
         16: {'psnr':23.32, 'ssim':.816, 'miou':.558, 'accuracy':.835}}
 for path in args.metrics:
     data = json.loads(path.read_text())
-    if data['smoke_run'] or data['num_batches'] != data['total_batches']:
+    if (data['smoke_run'] or data['num_batches'] != data['total_batches']
+            or data.get('shard_count', 1) > 1):
         raise SystemExit(f'Refusing incomplete/smoke results: {path}')
     views = data['input_views']
     print(f"\n{views} views: {data['num_batches']} samples, {data['scene_count']} scenes")

@@ -496,6 +496,9 @@ class TestLoss(MultiLoss):
                 self.miou.update(pred_cur, target_view[-i-1]["labelmap"].long())
                 self.accuracy.update(pred_cur, target_view[-i-1]["labelmap"].long())
                 self.psnr.update(rendered_images[-i-1], gt_images[-i-1])
+                # per-sample record (read by test.py for per-sample analysis; does not affect metrics)
+                # unclamped, same as torchmetrics PSNR; aggregate buckets as -10*log10(mean mse)
+                self.last_sample_mse = float(torch.mean((rendered_images[-i-1] - gt_images[-i-1]) ** 2))
                 self.ssim.update(rendered_images[-i-1].unsqueeze(0), gt_images[-i-1].unsqueeze(0))
                 self.update_lpips(rendered_images[-i-1], gt_images[-i-1])
                 rendered = rendered_depths[-i-1]
@@ -520,6 +523,7 @@ def loss_of_one_batch(batch,
 
     context_views = []
     target_views = []
+    track_time = total_time is not None
 
     assert len(batch) != 0
 
@@ -550,7 +554,7 @@ def loss_of_one_batch(batch,
     actual_model = model.module if hasattr(model, 'module') else model
 
     with torch.cuda.amp.autocast(enabled=bool(use_amp)):
-        if total_time is not None:
+        if track_time:
             torch.cuda.synchronize()
             time_start = time.perf_counter()
         if actual_model.training:
@@ -558,7 +562,7 @@ def loss_of_one_batch(batch,
         else:
             with torch.no_grad():
                 pred = actual_model(context_views)
-        if total_time is not None:
+        if track_time:
             torch.cuda.synchronize()
             total_time.append(time.perf_counter() - time_start)
 

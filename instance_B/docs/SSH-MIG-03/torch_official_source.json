@@ -1,0 +1,7 @@
+{
+  "index": "https://download.pytorch.org/whl/cu121/torch/",
+  "url": "https://download-r2.pytorch.org/whl/cu121/torch-2.1.0%2Bcu121-cp310-cp310-linux_x86_64.whl",
+  "sha256": "0d4e8c52a1fcf5ed6cfc256d9a370fcf4360958fc79d0b08a51d55e70914df46",
+  "provenance": "Exact URL and SHA256 read from official PyTorch cu121 index",
+  "transfer": "parallel byte ranges; full SHA256 verified before use"
+}

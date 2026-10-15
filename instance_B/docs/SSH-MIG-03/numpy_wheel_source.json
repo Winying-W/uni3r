@@ -1,0 +1,11 @@
+{
+  "filename": "numpy-1.26.4-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+  "url": "https://files.pythonhosted.org/packages/4b/d7/ecf66c1cd12dc28b4040b15ab4d17b773b87fa9d29ca16125de01adb36cd/numpy-1.26.4-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+  "digests": {
+    "blake2b_256": "4bd7ecf66c1cd12dc28b4040b15ab4d17b773b87fa9d29ca16125de01adb36cd",
+    "md5": "d428e3da2df4fa359313348302cf003a",
+    "sha256": "ffa75af20b44f8dba823498024771d5ac50620e6915abac414251bd971b4529f"
+  },
+  "size": 18240889,
+  "metadata_url": "https://pypi.org/pypi/numpy/1.26.4/json"
+}

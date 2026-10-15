@@ -1,0 +1,11 @@
+Name: torch
+Version: 2.1.0+cu121
+Requires-Dist: filelock
+Requires-Dist: typing-extensions
+Requires-Dist: sympy
+Requires-Dist: networkx
+Requires-Dist: jinja2
+Requires-Dist: fsspec
+Requires-Dist: triton (==2.1.0)
+Requires-Dist: jinja2 ; extra == 'dynamo'
+Requires-Dist: opt-einsum (>=3.3) ; extra == 'opt-einsum'

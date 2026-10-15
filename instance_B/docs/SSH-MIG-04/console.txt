@@ -1,0 +1,8 @@
+/mnt/workspace/Jensen/project/3DGS/Uni3R/instance_B/.venv/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+A cache current read/hash/schema PASS; C=BLOCKED
+regression {"tests_run": 76, "failures": 0, "errors": 0, "skips": 1, "seconds": 13.420923050493002, "process_peak_rss_kib": 1449736}
+training_tests {"tests_run": 8, "failures": 0, "errors": 0, "skips": 0, "seconds": 17.345327348448336, "process_peak_rss_kib": 1579664}
+Original B02 and 8 B03 training tests PASS; optimizer calls remain 5
+checkpoint_tests {"tests_run": 4, "failures": 0, "errors": 0, "skips": 0, "seconds": 8.463224662467837, "process_peak_rss_kib": 1787440}
+MIG04_CPU_REGRESSION_PASS: 88 collected, 87 PASS, 1 SKIP; 3 new synthetic CPU steps; ledger now 8/8; C=BLOCKED

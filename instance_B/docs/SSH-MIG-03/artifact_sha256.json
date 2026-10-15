@@ -1,0 +1,282 @@
+{
+  "instance_B/docs/SSH-MIG-03/mpmath_wheel_source.json": {
+    "bytes": 513,
+    "sha256": "49be04c20cbf247cdd80ca01618186bf9bd0b9546aa6c2c402888a59990fdab2"
+  },
+  "instance_B/docs/SSH-MIG-03/triton_download.log": {
+    "bytes": 205,
+    "sha256": "feb2a15460d8c5035b8240d8e9152283fca7f880b60b091cf02fdc2b5263e8ac"
+  },
+  "instance_B/docs/SSH-MIG-03/venv_create.log": {
+    "bytes": 215,
+    "sha256": "968f99f0871c6c2526aba30baa9700bf42983e44d52b674f4a900d5532b08266"
+  },
+  "instance_B/docs/SSH-MIG-03/integration_console.txt": {
+    "bytes": 6194,
+    "sha256": "8eec9ca8110c0115c939fa84e169fa3ed3a44fab7ee4dc7087abf29d1d89a881"
+  },
+  "instance_B/docs/SSH-MIG-03/scipy_wheel_source.json": {
+    "bytes": 599,
+    "sha256": "dff7c4a9f21e689cdae4f750cca2af0a1bc1e1c8ab00d75f8870f268ed40a5ef"
+  },
+  "instance_B/docs/SSH-MIG-03/requirements_initial.in": {
+    "bytes": 219,
+    "sha256": "c48c1817f4a84c68a6cce537d30239c8fb2773b7837c9a84eeda2c2c5432887b"
+  },
+  "instance_B/docs/SSH-MIG-03/isolation.sh": {
+    "bytes": 1391,
+    "sha256": "aa4eabc420dfc9dd20ecc87347b78bdb430633ece0fa88855167611aaacf667a"
+  },
+  "instance_B/docs/SSH-MIG-03/dependency_rationale.json": {
+    "bytes": 598,
+    "sha256": "8c15aef6de26e8ab3d31bda6c2047fe42161c8d9e9798db97b1d5e94ecea16e2"
+  },
+  "instance_B/docs/SSH-MIG-03/base_install.log": {
+    "bytes": 140,
+    "sha256": "a2c13658d88264bbd1d0e5ceee2c8f229bcb709d2eca1f1653dd149c08ae55b6"
+  },
+  "instance_B/docs/SSH-MIG-03/filelock_wheel_source.json": {
+    "bytes": 522,
+    "sha256": "04412b84d9ea77256b3d836757053285b5952f457ba6b01e198dc88113c0a600"
+  },
+  "instance_B/docs/SSH-MIG-03/final_sync.log": {
+    "bytes": 293,
+    "sha256": "4c67e69088f91dab3708277775b69bd3c8e92c7a7e8509b5f2fc6480cf5e3a10"
+  },
+  "instance_B/docs/SSH-MIG-03/environment_versions.json": {
+    "bytes": 1110,
+    "sha256": "a85a270ef51bbf97cf126d75cf23ddaa958a8aa6782e405da5c5a441333956ca"
+  },
+  "instance_B/docs/SSH-MIG-03/download_official.py": {
+    "bytes": 1512,
+    "sha256": "53abac290a019661056a81636f6f7e192537e96f35133e37f9c9fdc2bbb54b64"
+  },
+  "instance_B/docs/SSH-MIG-03/torch_download.log": {
+    "bytes": 309,
+    "sha256": "7f10aaad7ea2555c543e67829136fd887ed834f7dd5f242d54ad031ccb0dfb15"
+  },
+  "instance_B/docs/SSH-MIG-03/transitive_download.log": {
+    "bytes": 429,
+    "sha256": "cd7ef11b56c4b3afa687f3ba663fc667c2952127399a03ce9694da5b6ca60772"
+  },
+  "instance_B/docs/SSH-MIG-03/tool_source.json": {
+    "bytes": 455,
+    "sha256": "ee8f735c91808637296aab0e735ca8590f543189f69bccf9b76c3c8a4aa5a603"
+  },
+  "instance_B/docs/SSH-MIG-03/requirements.in": {
+    "bytes": 161,
+    "sha256": "984cba1b2abc483e625100134c33786fb5cdcb3c620e997700b3763085ae0ab5"
+  },
+  "instance_B/docs/SSH-MIG-03/download_base_wheels.py": {
+    "bytes": 988,
+    "sha256": "d6a287327e0c4d2afa45f042ebc893a9865223c7c8eb123722e096619138a211"
+  },
+  "instance_B/docs/SSH-MIG-03/module_summary.json": {
+    "bytes": 228,
+    "sha256": "f0dbe5ce5e9daed652e96a5c3cfed1bb71a4fc34d067ebfa25eac51a9e26fcd0"
+  },
+  "instance_B/docs/SSH-MIG-03/verify_environment.py": {
+    "bytes": 1390,
+    "sha256": "fee5e71428b65365082c376281d9602cde82e8e1b960abd49ebb09b4ad2e3443"
+  },
+  "instance_B/docs/SSH-MIG-03/requirements-base.in": {
+    "bytes": 42,
+    "sha256": "cfa1df536715d2052345e345f9d66baeb5edd5d6faebf56f7b1364ec407b31e4"
+  },
+  "instance_B/docs/SSH-MIG-03/dependency_check.txt": {
+    "bytes": 120,
+    "sha256": "83f458f2e0ded20f2c59450f1c87bd5cf6dae792a280f0df9e3f61fdd4c11d82"
+  },
+  "instance_B/docs/SSH-MIG-03/REBUILD.md": {
+    "bytes": 4169,
+    "sha256": "be8d06f4014b9031c0bf94a6518d49c7ef1c77c7986c06ff3b7a22c71ca2e8d5"
+  },
+  "instance_B/docs/SSH-MIG-03/environment_verification.json": {
+    "bytes": 1110,
+    "sha256": "a85a270ef51bbf97cf126d75cf23ddaa958a8aa6782e405da5c5a441333956ca"
+  },
+  "instance_B/docs/SSH-MIG-03/requirements-installed.txt": {
+    "bytes": 293,
+    "sha256": "e3ea3267a4f81553088b5fad5f90ccc84262b1f724c8b25f129c483378f75871"
+  },
+  "instance_B/docs/SSH-MIG-03/constraints.txt": {
+    "bytes": 691,
+    "sha256": "3f9e15f1519a4e819ff03c8785cc620003f7ba875d34f14047d5d5fbd8022bdc"
+  },
+  "instance_B/docs/SSH-MIG-03/resolve.log": {
+    "bytes": 27,
+    "sha256": "8c10d3c8ef47b4691c6af16c81d2368efa3050a11afecc8dbdaf7c218d4a435e"
+  },
+  "instance_B/docs/SSH-MIG-03/python_31022_attempt.log": {
+    "bytes": 71,
+    "sha256": "cd9f60a067945e88acb6c544d7cda4027ce521bda8539b4c395f0772cf70997c"
+  },
+  "instance_B/docs/SSH-MIG-03/requirements.lock": {
+    "bytes": 22075,
+    "sha256": "f62c635b0423920b326926405a645eb15b3cd3662d78b5c8902c31f5315067a7"
+  },
+  "instance_B/docs/SSH-MIG-03/markupsafe_wheel_source.json": {
+    "bytes": 608,
+    "sha256": "c7bb0e6d97ff084b4d6edd1570b0782a93e489e5e900e4f44083f5b685ac9153"
+  },
+  "instance_B/docs/SSH-MIG-03/base_wheels_download.log": {
+    "bytes": 212,
+    "sha256": "a681a72e4b31f4bcda67b4ce5059300409c20644cb49e3ff19ed4ef3e64abf42"
+  },
+  "instance_B/docs/SSH-MIG-03/python_install.log": {
+    "bytes": 193,
+    "sha256": "c3dfe221ccb3fb1414d1b1021bc94d3f187f0d2ceb38fc0395fce1af719f5f00"
+  },
+  "instance_B/docs/SSH-MIG-03/regression_summary.json": {
+    "bytes": 11566,
+    "sha256": "cab18e387b39b7489e95e7c576c5dc6d3680bdfb9c889e21a35ec1e1897750eb"
+  },
+  "instance_B/docs/SSH-MIG-03/pytest_collection.txt": {
+    "bytes": 7272,
+    "sha256": "a9225c73606672d7a8c41e1a8b004c75bb967896cf8db6e16a4331c63a1ac856"
+  },
+  "instance_B/docs/SSH-MIG-03/numpy_wheel_source.json": {
+    "bytes": 599,
+    "sha256": "b6b8ebbd867c3245c35445fce4e1ba1aa0f627ec6ae6f70f4606d4a96ba9d368"
+  },
+  "instance_B/docs/SSH-MIG-03/triton_wheel_source.json": {
+    "bytes": 603,
+    "sha256": "b4db2e84ad04d6f1a21cfd7128292ea529ade225b8a89356aec014f24f313bb5"
+  },
+  "instance_B/docs/SSH-MIG-03/resolve_verified.log": {
+    "bytes": 22106,
+    "sha256": "078aa65c462ee2ea67d1eab18ee781311660795ad65125eb2a285b26e5fd4e4d"
+  },
+  "instance_B/docs/SSH-MIG-03/regression_driver.log": {
+    "bytes": 652,
+    "sha256": "62c0867c92a61461114e965d61bd4785436ca6c4cd25a6d55ca824e1d03441be"
+  },
+  "instance_B/docs/SSH-MIG-03/torch_wheel_metadata.txt": {
+    "bytes": 311,
+    "sha256": "1306a65ce41df926483895cdaf6a61fe5c127f907b6a01eb71bd143f24561623"
+  },
+  "instance_B/docs/SSH-MIG-03/download_transitive_wheels.py": {
+    "bytes": 1434,
+    "sha256": "fceccadaa6bde421938e9e7a92f03a041810a62a146c6c9ef578f74fec9edf08"
+  },
+  "instance_B/docs/SSH-MIG-03/audit_before.json": {
+    "bytes": 59328,
+    "sha256": "62586a3e71d755065e4ea12c6a0b91d3cbf0eefc558705857e64e08ec148f8d9"
+  },
+  "instance_B/docs/SSH-MIG-03/sympy_wheel_source.json": {
+    "bytes": 514,
+    "sha256": "de693b91f727158d5c79e4b5cdf72aeb209d6cb2b324a2c2ddbe9bbe21eb7152"
+  },
+  "instance_B/docs/SSH-MIG-03/network_attempts.txt": {
+    "bytes": 986,
+    "sha256": "71e8133458cb8c894428a4ba0a9fbdc16ae7f8f01a1b75c7656efd2e6d0ca0ca"
+  },
+  "instance_B/docs/SSH-MIG-03/jinja2_wheel_source.json": {
+    "bytes": 513,
+    "sha256": "c6d135ca32f00f4be376153f742d7142e01de58492e97c87f75fec536dd22141"
+  },
+  "instance_B/docs/SSH-MIG-03/python_candidates.json": {
+    "bytes": 8553,
+    "sha256": "3cf2b5c6dd1a345ac5e3c9d59757df80691d34aca40ff2dd8df018f1e9951f2b"
+  },
+  "instance_B/docs/SSH-MIG-03/shared_before_regression.json": {
+    "bytes": 351,
+    "sha256": "f07c616591e8b82c151b89542780ee858ce63d9610d5ca71d4ca3625d283c09b"
+  },
+  "instance_B/docs/SSH-MIG-03/torch_install.log": {
+    "bytes": 293,
+    "sha256": "7c078a4c202eff4514335f6f9ccee6771a431ac7a61c3d4bf56164b3582db1c8"
+  },
+  "instance_B/docs/SSH-MIG-03/commands.sh": {
+    "bytes": 2413,
+    "sha256": "3307df857c8d836d3e8b59d008a2b38b454f8ba0a687e62982ef66bde61fba3c"
+  },
+  "instance_B/docs/SSH-MIG-03/base_install_verified.log": {
+    "bytes": 631,
+    "sha256": "e61ec036a701db1fe995bdd2dfabb02034f0fe0a199726c9227a0bacaca4047b"
+  },
+  "instance_B/docs/SSH-MIG-03/REPORT.md": {
+    "bytes": 14191,
+    "sha256": "bd1299be5f5aa3ba25849b4d439a2612391b5de03cc22bdcd088a86b849b269c"
+  },
+  "instance_B/docs/SSH-MIG-03/final_status.json": {
+    "bytes": 983,
+    "sha256": "34d0766459f870b447579effc3aa18c21df444fb96152450d689b22bae2d111d"
+  },
+  "instance_B/docs/SSH-MIG-03/audit_after.json": {
+    "bytes": 2239,
+    "sha256": "63772b1a96d654d28598cb6c8ef63863d5478c16abababe69010554eb75438ed"
+  },
+  "instance_B/docs/SSH-MIG-03/networkx_wheel_source.json": {
+    "bytes": 520,
+    "sha256": "277096b389cd3db7ce7bc650d878cb3dd2276f2f77310b2aa80b34239c345f1a"
+  },
+  "instance_B/docs/SSH-MIG-03/torch_official_source.json": {
+    "bytes": 396,
+    "sha256": "a342ee64d828830917989ca8739c7c8d415aabdeda1ae5005d59237de5944c02"
+  },
+  "instance_B/docs/SSH-MIG-03/run_cpu_regression.py": {
+    "bytes": 2486,
+    "sha256": "9014b0052a85c703af45418028993178841aa6e5f897da90de9b8b177214cf7a"
+  },
+  "instance_B/docs/SSH-MIG-03/unit_console.txt": {
+    "bytes": 2350,
+    "sha256": "26f5c65a505fa23f26647b837b221b61844bda81048b3ad00d68a4df24fe939f"
+  },
+  "instance_B/docs/SSH-MIG-03/fsspec_wheel_source.json": {
+    "bytes": 522,
+    "sha256": "fd69106556dee3440ac80aa92377ebb7d69e52bbff9b3b597736e1754697fe43"
+  },
+  "instance_B/results/B-02/SSH-MIG-03/integration/unit_results.json": {
+    "bytes": 8004,
+    "sha256": "3ab9b3025573b9a1460a4a827142a4c16b4b1cd0cfa4f274922a9c7b356a713c"
+  },
+  "instance_B/results/B-02/SSH-MIG-03/integration/unittest_output.txt": {
+    "bytes": 5652,
+    "sha256": "3e298feab4b9358903d07af0e3a19e7d2fbcdf9e2a483fec43b42514fca8dc75"
+  },
+  "instance_B/results/B-02/SSH-MIG-03/integration/test_student_evidence.json": {
+    "bytes": 2099,
+    "sha256": "501ddb69c0721cbb0e14c6d15fb15343d43128a9c88c50a9c1f2be39ed31a970"
+  },
+  "instance_B/results/B-02/SSH-MIG-03/integration/initialization_load_cache.json": {
+    "bytes": 242,
+    "sha256": "f7ac7c476272e2aa3fe7aeb9a2608f54bff87924e2e3f6764fdb87133007aec1"
+  },
+  "instance_B/results/B-02/SSH-MIG-03/integration/configuration.json": {
+    "bytes": 1437,
+    "sha256": "3ff59f139916056306a3fc63f5b1e027192208fdcbe18c6d77907616aa901445"
+  },
+  "instance_B/results/B-02/SSH-MIG-03/integration/completion.json": {
+    "bytes": 82,
+    "sha256": "ae82a03c7c1e868e94d19f7f84b89fab918372b375f4e33f76be4a02b4081e90"
+  },
+  "instance_B/results/B-02/SSH-MIG-03/integration/test_b02_integration_evidence.json": {
+    "bytes": 27451,
+    "sha256": "2df046560ea8616c59cc0dc86f86d871513d4ae7bf9f1152fe4328ed7a0fea42"
+  },
+  "instance_B/results/B-02/SSH-MIG-03/unit/unit_results.json": {
+    "bytes": 3280,
+    "sha256": "d2ccec775bcbeeb72754c1f1181db749f718a32a5ab97bcb1e453f1cde64be0c"
+  },
+  "instance_B/results/B-02/SSH-MIG-03/unit/unittest_output.txt": {
+    "bytes": 2247,
+    "sha256": "cb4784d82073b371ffc033e8d0facd2a5f5526c7a62f8b65fef8a7fa8915d807"
+  },
+  "instance_B/results/B-02/SSH-MIG-03/unit/test_criterion_evidence.json": {
+    "bytes": 15055,
+    "sha256": "dbdff9c7299d90ef08a02c0ef175b525a23456acdb726b4cc82e166b72379d32"
+  },
+  "instance_B/results/B-02/SSH-MIG-03/unit/configuration.json": {
+    "bytes": 1402,
+    "sha256": "a4d74d63a170f3bd1928bdd601a7acca18789251373e9ecc879ef4d0454f34f3"
+  },
+  "instance_B/results/B-02/SSH-MIG-03/unit/test_matcher_evidence.json": {
+    "bytes": 15625,
+    "sha256": "6e9307023b6311e7bb6bcc2145dcb6465c2250778c149c8ab980f15f04af8dec"
+  },
+  "instance_B/results/B-02/SSH-MIG-03/unit/completion.json": {
+    "bytes": 81,
+    "sha256": "8742fbe02fb2a0508f8b2a29761359257d5263a67d399f022e4868caf4c20864"
+  }
+}

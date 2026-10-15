@@ -1,0 +1,48 @@
+diff --git a/modules/models/lseg_net.py b/modules/models/lseg_net.py
+index 7290b67..2db2aa0 100644
+--- a/modules/models/lseg_net.py
++++ b/modules/models/lseg_net.py
+@@ -126,6 +126,7 @@ class LSeg(BaseModel):
+         self.clip_pretrained, self.pretrained, self.scratch = _make_encoder(
+             backbone,
+             features,
++            use_pretrained=kwargs.get("use_pretrained", True),
+             groups=1,
+             expand=False,
+             exportable=False,
+@@ -228,4 +229,4 @@ class LSegNet(LSeg):
+ 
+     
+         
+-    
+\ No newline at end of file
++    
+diff --git a/modules/models/lseg_vit.py b/modules/models/lseg_vit.py
+index dabbfcc..da180c7 100644
+--- a/modules/models/lseg_vit.py
++++ b/modules/models/lseg_vit.py
+@@ -3,6 +3,7 @@ import torch.nn as nn
+ import timm
+ import types
+ import math
++import os
+ import torch.nn.functional as F
+ import clip
+ 
+@@ -221,7 +222,8 @@ def get_readout_oper(vit_features, features, use_readout, start_index=1):
+ def _make_pretrained_clip_vitl16_384(
+     pretrained, use_readout="ignore", hooks=None, enable_attention_hooks=False
+ ):
+-    clip_pretrained, _ = clip.load("ViT-B/32", device='cuda', jit=False)
++    clip_pretrained, _ = clip.load("ViT-B/32", device='cuda', jit=False,
++                                   download_root=os.environ.get('UNI3R_CLIP_CACHE'))
+     model = timm.create_model("vit_large_patch16_384", pretrained=pretrained)
+ 
+     hooks = [5, 11, 17, 23] if hooks == None else hooks
+@@ -532,4 +534,4 @@ def _make_vit_b16_backbone(
+         _resize_pos_embed, pretrained.model
+     )
+ 
+-    return pretrained
+\ No newline at end of file
++    return pretrained

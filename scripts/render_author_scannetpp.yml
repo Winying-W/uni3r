@@ -1,0 +1,11 @@
+# Author rendering parameters; release and scene membership still require verification.
+data_root: /mnt/workspace/Jensen/project/3DGS/data/author_raw/scannetpp
+output_dir: /mnt/workspace/Jensen/project/3DGS/data/author_staging/scannetpp
+render_iphone: false
+render_dslr: true
+splits: [nvs_sem_train, nvs_sem_val]
+downscale_factor: 3
+near: 0.05
+far: 20.0
+# Scheduling only; does not change the rendering parameters.
+num_threads: 4

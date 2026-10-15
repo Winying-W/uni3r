@@ -1,0 +1,13 @@
+{
+  "write_allowlist": [
+    "instance_B/docs/SSH-MIG-04/**",
+    "instance_B/results/B-03/SSH-MIG-04/**",
+    "instance_B/results/B-03/20261008T140224Z_cpu_b03/optimizer_budget.jsonl (append-only max 3 calls)"
+  ],
+  "read_existing_DPT": true,
+  "A_cache": "CPU weights_only deserialization and shared schema checks only; no model forward",
+  "C": "known handoff paths only",
+  "no_dependency_changes": true,
+  "no_original_code_test_assertion_changes": true,
+  "GPU_USED": "NO"
+}

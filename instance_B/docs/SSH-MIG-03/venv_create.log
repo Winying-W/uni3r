@@ -1,0 +1,3 @@
+Using CPython 3.10.21 interpreter at: instance_B/.runtime/python/cpython-3.10.21-linux-x86_64-gnu/bin/python3.10
+Creating virtual environment at: instance_B/.venv
+Activate with: source instance_B/.venv/bin/activate

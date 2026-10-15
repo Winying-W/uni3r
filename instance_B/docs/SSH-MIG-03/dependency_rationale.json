@@ -1,0 +1,12 @@
+{
+  "core": "Exact historical torch, numpy, scipy",
+  "pytest": "8.3.5 pinned stable Python 3.10-compatible runner; historical runner uses unittest, no historical pytest pin",
+  "constraints": "Existing project lock for transitive runtime packages; iniconfig 2.1.0 and pluggy 1.5.0 pinned pytest helpers",
+  "excluded": "torchvision torchaudio full Uni3R stack; no import requirement found",
+  "official_sources": [
+    "https://pypi.org",
+    "https://files.pythonhosted.org",
+    "https://download.pytorch.org/whl/cu121",
+    "https://github.com/astral-sh/python-build-standalone/releases"
+  ]
+}

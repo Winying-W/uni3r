@@ -1,0 +1,205 @@
+[
+  {
+    "path": "instance_B/docs/SSH-MIG-04/RUN_SCOPE.md",
+    "bytes": 673,
+    "kind": "NEW"
+  },
+  {
+    "path": "instance_B/docs/SSH-MIG-04/legacy_checkpoint_compatibility.json",
+    "bytes": 805,
+    "kind": "NEW"
+  },
+  {
+    "path": "instance_B/docs/SSH-MIG-04/existing_modules.json",
+    "bytes": 752,
+    "kind": "NEW"
+  },
+  {
+    "path": "instance_B/docs/SSH-MIG-04/environment.json",
+    "bytes": 1000,
+    "kind": "NEW"
+  },
+  {
+    "path": "instance_B/docs/SSH-MIG-04/test_summary.json",
+    "bytes": 13493,
+    "kind": "NEW"
+  },
+  {
+    "path": "instance_B/docs/SSH-MIG-04/C_current.json",
+    "bytes": 833,
+    "kind": "NEW"
+  },
+  {
+    "path": "instance_B/docs/SSH-MIG-04/ledger_before.jsonl",
+    "bytes": 1882,
+    "kind": "NEW"
+  },
+  {
+    "path": "instance_B/docs/SSH-MIG-04/scope.json",
+    "bytes": 482,
+    "kind": "NEW"
+  },
+  {
+    "path": "instance_B/docs/SSH-MIG-04/W1_update.json",
+    "bytes": 7697,
+    "kind": "NEW"
+  },
+  {
+    "path": "instance_B/docs/SSH-MIG-04/A_cache_current.json",
+    "bytes": 1233,
+    "kind": "NEW"
+  },
+  {
+    "path": "instance_B/docs/SSH-MIG-04/checkpoint_recovery.json",
+    "bytes": 1038,
+    "kind": "NEW"
+  },
+  {
+    "path": "instance_B/docs/SSH-MIG-04/run_mig04.py",
+    "bytes": 10206,
+    "kind": "NEW"
+  },
+  {
+    "path": "instance_B/docs/SSH-MIG-04/audit_before.json",
+    "bytes": 74732,
+    "kind": "NEW"
+  },
+  {
+    "path": "instance_B/docs/SSH-MIG-04/skip_after_moments.json",
+    "bytes": 1718,
+    "kind": "NEW"
+  },
+  {
+    "path": "instance_B/docs/SSH-MIG-04/commands.sh",
+    "bytes": 436,
+    "kind": "NEW"
+  },
+  {
+    "path": "instance_B/docs/SSH-MIG-04/REPORT.md",
+    "bytes": 17187,
+    "kind": "NEW"
+  },
+  {
+    "path": "instance_B/docs/SSH-MIG-04/console.txt",
+    "bytes": 1074,
+    "kind": "NEW"
+  },
+  {
+    "path": "instance_B/docs/SSH-MIG-04/final_status.json",
+    "bytes": 1511,
+    "kind": "NEW"
+  },
+  {
+    "path": "instance_B/docs/SSH-MIG-04/audit_after.json",
+    "bytes": 1457,
+    "kind": "NEW"
+  },
+  {
+    "path": "instance_B/results/B-03/SSH-MIG-04/attempt_01/synthetic_migration_W1.pt.receipt.json",
+    "bytes": 8708,
+    "kind": "NEW"
+  },
+  {
+    "path": "instance_B/results/B-03/SSH-MIG-04/attempt_01/training_tests_test_training_evidence.json",
+    "bytes": 29221,
+    "kind": "NEW"
+  },
+  {
+    "path": "instance_B/results/B-03/SSH-MIG-04/attempt_01/regression_stdout.txt",
+    "bytes": 7800,
+    "kind": "NEW"
+  },
+  {
+    "path": "instance_B/results/B-03/SSH-MIG-04/attempt_01/regression_test_criterion_evidence.json",
+    "bytes": 15055,
+    "kind": "NEW"
+  },
+  {
+    "path": "instance_B/results/B-03/SSH-MIG-04/attempt_01/truncated_diagnostic.pt",
+    "bytes": 13,
+    "kind": "NEW"
+  },
+  {
+    "path": "instance_B/results/B-03/SSH-MIG-04/attempt_01/checkpoint_tests_test_checkpointing_evidence.json",
+    "bytes": 3674,
+    "kind": "NEW"
+  },
+  {
+    "path": "instance_B/results/B-03/SSH-MIG-04/attempt_01/checkpoint_tests_results.json",
+    "bytes": 743,
+    "kind": "NEW"
+  },
+  {
+    "path": "instance_B/results/B-03/SSH-MIG-04/attempt_01/synthetic_migration_W1.pt",
+    "bytes": 417403412,
+    "kind": "NEW"
+  },
+  {
+    "path": "instance_B/results/B-03/SSH-MIG-04/attempt_01/checkpoint_tests_stdout.txt",
+    "bytes": 512,
+    "kind": "NEW"
+  },
+  {
+    "path": "instance_B/results/B-03/SSH-MIG-04/attempt_01/training_test_events.jsonl",
+    "bytes": 2534,
+    "kind": "NEW"
+  },
+  {
+    "path": "instance_B/results/B-03/SSH-MIG-04/attempt_01/training_tests_results.json",
+    "bytes": 1259,
+    "kind": "NEW"
+  },
+  {
+    "path": "instance_B/results/B-03/SSH-MIG-04/attempt_01/regression_test_matcher_evidence.json",
+    "bytes": 15625,
+    "kind": "NEW"
+  },
+  {
+    "path": "instance_B/results/B-03/SSH-MIG-04/attempt_01/resumed_events.jsonl",
+    "bytes": 6374,
+    "kind": "NEW"
+  },
+  {
+    "path": "instance_B/results/B-03/SSH-MIG-04/attempt_01/regression_results.json",
+    "bytes": 11199,
+    "kind": "NEW"
+  },
+  {
+    "path": "instance_B/results/B-03/SSH-MIG-04/attempt_01/continuous_events.jsonl",
+    "bytes": 12541,
+    "kind": "NEW"
+  },
+  {
+    "path": "instance_B/results/B-03/SSH-MIG-04/attempt_01/bad_hash_receipt.json",
+    "bytes": 8708,
+    "kind": "NEW"
+  },
+  {
+    "path": "instance_B/results/B-03/SSH-MIG-04/attempt_01/regression_test_b02_integration_evidence.json",
+    "bytes": 27451,
+    "kind": "NEW"
+  },
+  {
+    "path": "instance_B/results/B-03/SSH-MIG-04/attempt_01/truncated_receipt.json",
+    "bytes": 8699,
+    "kind": "NEW"
+  },
+  {
+    "path": "instance_B/results/B-03/SSH-MIG-04/attempt_01/regression_test_student_evidence.json",
+    "bytes": 2099,
+    "kind": "NEW"
+  },
+  {
+    "path": "instance_B/results/B-03/SSH-MIG-04/attempt_01/training_tests_stdout.txt",
+    "bytes": 852,
+    "kind": "NEW"
+  },
+  {
+    "path": "instance_B/results/B-03/20261008T140224Z_cpu_b03/optimizer_budget.jsonl",
+    "kind": "APPEND_ONLY",
+    "bytes_before": 1882,
+    "bytes_after": 2989,
+    "sha256_before": "844bb1b22e398316fbfee54c06daaf90d1816dd4f033c6a6287402efafc16690",
+    "sha256_after": "a92e97a0a332f5e90fb9356871aab74ddbeaad35ccace0593f2980f2c260af5f"
+  }
+]

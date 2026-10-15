@@ -1,0 +1,11 @@
+{
+  "filename": "MarkupSafe-2.1.5-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+  "url": "https://files.pythonhosted.org/packages/7c/52/2b1b570f6b8b803cef5ac28fdf78c0da318916c7d2fe9402a84d591b394c/MarkupSafe-2.1.5-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+  "digests": {
+    "blake2b_256": "7c522b1b570f6b8b803cef5ac28fdf78c0da318916c7d2fe9402a84d591b394c",
+    "md5": "196950c31a6eaa02ceb89239871526f8",
+    "sha256": "2174c595a0d73a3080ca3257b40096db99799265e1c27cc5a610743acd86d62f"
+  },
+  "size": 25818,
+  "metadata_url": "https://pypi.org/pypi/markupsafe/2.1.5/json"
+}

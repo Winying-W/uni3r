@@ -1,0 +1,14 @@
+{
+  "utc": "2026-10-11T08:07:48.513894+00:00",
+  "branch": "main",
+  "head": "7a7f80205fb075228ff75aac43635b96de901110",
+  "git_status": "M .gitignore\n M reproduce/compare_metrics.py\n M scripts/test.sh\n M scripts/test_16views.sh\n M scripts/test_8views.sh\n M scripts/train.sh\n m submodules/diff-gaussian-rasterization\n m submodules/lang_seg\n M test.py\n M uni3r/loss.py\n M uni3r/lseg.py\n M uni3r/utils/path_manager.py\n?? AUTHOR_DATASETS.md\n?? MERGE_REPORT.md\n?? REPRODUCTION.md\n?? instance_A/\n?? instance_B/\n?? requirements-renderpy.txt\n?? requirements-reproduction.lock.txt\n?? requirements-reproduction.txt\n?? scripts/build_renderpy_local.sh\n?? scripts/download_hf_training_data.py\n?? scripts/download_reproduction.py\n?? scripts/env.sh\n?? scripts/env_render.sh\n?? scripts/evaluate_local.sh\n?? scripts/evaluate_sharded.sh\n?? scripts/export_instance_cache.py\n?? scripts/fetch_scannet_intrinsics.py\n?? scripts/install_environment.sh\n?? scripts/merge_evaluation.py\n?? scripts/prepare_scannet_hf.py\n?? scripts/prepare_scannetpp_hf.py\n?? scripts/render_author_scannetpp.yml\n?? scripts/train_local.sh\n?? scripts/train_smoke.py\n?? scripts/verify_author_renderer.py\n?? scripts/verify_data.py\n?? uni3r/instance/",
+  "git_status_identical": true,
+  "head_identical": true,
+  "protected_B_files": 132,
+  "protected_shared_files": 242,
+  "changed": [],
+  "git_ignore_rules": "instance_B/.gitignore:1:/.venv/\tinstance_B/.venv\ninstance_B/.gitignore:2:/.runtime/\tinstance_B/.runtime\ninstance_B/.gitignore:3:/.cache/\tinstance_B/.cache\ninstance_B/.gitignore:4:/.tmp/\tinstance_B/.tmp\ninstance_B/.gitignore:5:/.tools/\tinstance_B/.tools",
+  "disk": "Filesystem                                                                                    Size  Used Avail Use% Mounted on\nrund:ihrfvLka:cpfs-29001ydxzc9tqti3foji2-000001.cn-wulanchabu.cpfs.aliyuncs.com:/limx_embap/  190T  149T   42T  79% /mnt/workspace\n",
+  "inodes": "Filesystem                                                                                      Inodes     IUsed    IFree IUse% Mounted on\nrund:ihrfvLka:cpfs-29001ydxzc9tqti3foji2-000001.cn-wulanchabu.cpfs.aliyuncs.com:/limx_embap/ 294885376 196248730 98636646   67% /mnt/workspace\n"
+}

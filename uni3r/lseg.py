@@ -12,7 +12,7 @@ class LSegFeatureExtractor(LSegNet):
             arch_option=0, 
             block_depth=0, 
             activation='lrelu',
-            use_pretrained=use_pretrained
+            use_pretrained=use_pretrained,
         )
 
         self.half_res = half_res
@@ -119,8 +119,9 @@ class LSegFeatureExtractor(LSegNet):
         print(f"Processed state dict. Number of keys: {len(new_state_dict)}")
         
         print("Initializing model...")
-        # Every parameter is replaced by the strict LSeg checkpoint below.
-        kwargs["use_pretrained"] = False
+        # The complete LSeg checkpoint is loaded strictly below. Downloading
+        # ImageNet weights first is redundant and prevents offline inference.
+        kwargs['use_pretrained'] = False
         model = cls(*args, **kwargs)
         
         print("Loading state dict into model...")

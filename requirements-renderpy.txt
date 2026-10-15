@@ -1,0 +1,12 @@
+# Python 3.9 environment; renderpy itself is built from its pinned Git checkout.
+numpy==1.26.4
+opencv-python==4.10.0.84
+Pillow==10.4.0
+imageio==2.37.2
+munch==4.0.0
+PyYAML==6.0.3
+tqdm==4.70.1
+setuptools==82.0.1
+wheel==0.48.0
+packaging==26.3
+ninja==1.13.2

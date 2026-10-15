@@ -1,0 +1,8 @@
+Initial urllib metadata read did not return promptly. curl IPv4 metadata succeeded.
+PyPI uv 0.12.7 wheel transfer timed out after 180 seconds: 3004015/20058968 bytes. Partial wheel not executed.
+Official GitHub release and direct IPv4 routing probed; results retained in subsequent logs.
+Official GitHub uv archive also timed out: 2115728/19419908 bytes at 120 seconds; not executed.
+Windows in-memory download first blocked by sandbox network proxy; user authorized sandbox-external retry, which timed out at 45 seconds. No local artifact or credential was uploaded.
+Official uv PyPI wheel then downloaded in 39 parallel 512 KiB ranges and SHA256 verified before extracting only uv.
+Initial torch direct-URL resolver was terminated by exact own PID and command match due to slow transfer. No other process was stopped.
+Official PyTorch index supplied download-r2.pytorch.org URL and SHA256; torch transfer uses 32 bounded concurrent 8 MiB ranges, exact lengths and final SHA256 check.

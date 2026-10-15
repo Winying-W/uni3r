@@ -25,3 +25,25 @@ build/
 # Outputs
 outputs/
 
+# Local reproduction artifacts
+.cache/
+logs/
+test_results/
+submodules/CLIP/
+submodules/simple-knn/
+submodules/pytorch3d/
+submodules/renderpy/
+
+# Downloaded weights, generated fixtures and machine-local environments
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.pth.part_*
+*.part
+*.assembling
+*.whl
+.venv/
+.env.daxiang.sh
+instance_A/results/
+instance_B/results/

@@ -1,0 +1,8 @@
+{
+  "hashes": {
+    "uni3r/instance/frozen_base.py": "060fad959b7eeba432e21d4fc3547d2a3ec55d662111ee21186f45dae4f550aa",
+    "uni3r/instance/contracts.py": "2810deaffde90952ce5f088d12ec112d24aed8c7f583c9498169261687ea072f"
+  },
+  "contracts_match_historical_B02": true,
+  "note": "Supplement to tracked/shared baseline; recorded before any B tests"
+}

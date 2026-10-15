@@ -1,0 +1,9 @@
+{
+  "trainer_optimizer": "EXISTS: TrainingEngine, BudgetedAdamW; fixed AdamW DPT lr 1e-5/new lr 1e-4, wd 0.05, clip 1.0",
+  "accumulation_normalization": "EXISTS: independent M/O active-scene denominators; original four-scene and tail-window gradient reference tests passed",
+  "no_supervision_skip": "EXISTS: skip before forward; moments/parameters/LR/RNG unchanged after first AdamW update",
+  "checkpoint": "EXISTS: atomic no-overwrite save, CPU weights_only hash verification, format/source/config/environment validation, restore into new engine",
+  "historical_A_forward": "PASS only in 20261008T140224Z_cpu_b03/attempt_01/m0_probe/real_student_forward.json; not rerun",
+  "current_C_targets": "BLOCKED",
+  "historical_source_files_matched": 11
+}

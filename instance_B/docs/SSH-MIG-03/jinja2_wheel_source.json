@@ -1,0 +1,11 @@
+{
+  "filename": "jinja2-3.1.6-py3-none-any.whl",
+  "url": "https://files.pythonhosted.org/packages/62/a1/3d680cbfd5f4b8f15abc1d571870c5fc3e594bb582bc3b64ea099db13e56/jinja2-3.1.6-py3-none-any.whl",
+  "digests": {
+    "blake2b_256": "62a13d680cbfd5f4b8f15abc1d571870c5fc3e594bb582bc3b64ea099db13e56",
+    "md5": "845b37cea56edd0f4dbd949244e9d798",
+    "sha256": "85ece4451f492d0c13c5dd7c13a64681a86afae63a5f347908daf103ce6d2f67"
+  },
+  "size": 134899,
+  "metadata_url": "https://pypi.org/pypi/jinja2/3.1.6/json"
+}

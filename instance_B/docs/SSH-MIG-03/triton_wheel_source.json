@@ -1,0 +1,11 @@
+{
+  "filename": "triton-2.1.0-0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+  "url": "https://files.pythonhosted.org/packages/4d/22/91a8af421c8a8902dde76e6ef3db01b258af16c53d81e8c0d0dc13900a9e/triton-2.1.0-0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+  "digests": {
+    "blake2b_256": "4d2291a8af421c8a8902dde76e6ef3db01b258af16c53d81e8c0d0dc13900a9e",
+    "md5": "4faeb54edc4bd2f8a0dc20edf8223a85",
+    "sha256": "66439923a30d5d48399b08a9eae10370f6c261a5ec864a64983bae63152d39d7"
+  },
+  "size": 89215103,
+  "metadata_url": "https://pypi.org/pypi/triton/2.1.0/json"
+}

@@ -1,0 +1,36 @@
+{
+  "status": "BLOCKED",
+  "checked_paths": [
+    {
+      "path": "instance_C/C_PROGRESS.md",
+      "exists": false
+    },
+    {
+      "path": "instance_C/README.md",
+      "exists": false
+    },
+    {
+      "path": "instance_C/handoff.json",
+      "exists": false
+    },
+    {
+      "path": "uni3r/instance/C_PROGRESS.md",
+      "exists": false
+    },
+    {
+      "path": "reproduce/C_PROGRESS.md",
+      "exists": false
+    }
+  ],
+  "found_handoffs": [],
+  "reason": "This bounded current check found no C handoff/contract-format GT targets",
+  "missing": [
+    "contract-format targets",
+    "A-matched scene/frame/grid",
+    "physical cross-view ID statement",
+    "valid/confidence/ignore definition",
+    "ordered crop/resize evidence",
+    "source/split/diagnostic purpose",
+    "exhaustiveness basis (otherwise False)"
+  ]
+}

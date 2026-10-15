@@ -1,0 +1,5 @@
+# Official CUDA 12.1 wheel from verified local wheelhouse; provenance in torch_official_source.json
+torch==2.1.0+cu121
+numpy==1.26.4
+scipy==1.15.3
+pytest==8.3.5

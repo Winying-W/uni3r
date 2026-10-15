@@ -119,8 +119,10 @@ class Uni3R(nn.Module):
         images_up = images.view(-1, 3, H, W)
         images_up = F.interpolate(images_up, size=(518, 518), mode='bilinear', align_corners=False)
         images_up = images_up.view(B, V, 3, 518, 518)
-        with torch.no_grad():
-            distiller_outputs = self.distiller((images_up + 1) / 2)
+        distiller_outputs = None
+        if self.distiller is not None:  # None only when UNI3R_EVAL_SKIP_DISTILLER=1 (eval-only)
+            with torch.no_grad():
+                distiller_outputs = self.distiller((images_up + 1) / 2)
 
         dtype = torch.bfloat16 if torch.cuda.get_device_capability()[0] >= 8 else torch.float16
         if self.config.freeze_dust3r:
@@ -145,6 +147,8 @@ class Uni3R(nn.Module):
             final_output[i]['depth'] = outputs['depth'][:, i]
             final_output[i]['extr'] = extr[:, i]
             final_output[i]['intr'] = intr[:, i]
+            if distiller_outputs is None:
+                continue
             # for depth map supervision
             final_output[i]['distiller_depth'] = distiller_outputs['depth'][:, i]
             final_output[i]['distiller_depth_conf'] = distiller_outputs['depth_conf'][:, i]
@@ -221,4 +225,9 @@ class Uni3R(nn.Module):
         if missing:
             raise RuntimeError(f"Checkpoint is missing model weights: {missing}")
         del ckpt
+        if os.environ.get("UNI3R_EVAL_SKIP_DISTILLER") == "1":
+            # The frozen VGGT distiller only feeds the training geometry loss; TestLoss never
+            # reads its outputs. Dropping it saves ~5 GB GPU memory at evaluation time.
+            print("UNI3R_EVAL_SKIP_DISTILLER=1: distiller removed (evaluation only)")
+            model.distiller = None
         return model.to(device)

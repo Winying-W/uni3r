@@ -1,0 +1,28 @@
+environment_verification.json exit 0
+dependency_check.txt exit 0
+pytest_collection.txt exit 0
+unit_console.txt exit 0
+integration_console.txt exit 0
+{
+  "utc": "2026-10-11T08:06:28.029508+00:00",
+  "collected": 76,
+  "pass": 75,
+  "skip": 1,
+  "fail": 0,
+  "test_set_comparison": {
+    "unit": {
+      "same_test_ids": true,
+      "actual_count": 23,
+      "historical_count": 23
+    },
+    "integration": {
+      "same_test_ids": true,
+      "actual_count": 53,
+      "historical_count": 53
+    }
+  },
+  "GPU_USED": "NO",
+  "optimizer_steps": 0,
+  "new_training_checkpoints": 0,
+  "evidence_kind": "CPU_SYNTHETIC_REGRESSION_NOT_REAL_AC_INTEGRATION"
+}

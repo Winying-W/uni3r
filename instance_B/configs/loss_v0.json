@@ -1,0 +1,9 @@
+{
+  "bce_weight": 5.0,
+  "dice_weight": 5.0,
+  "objectness_weight": 2.0,
+  "eps": 0.000001,
+  "alpha_no_object": 0.1,
+  "chunk_size": 4096,
+  "workspace_budget_bytes": 67108864
+}

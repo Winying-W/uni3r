@@ -1,0 +1,29 @@
+{
+  "status": "PASS_NEW_ENV_SAVE_RESTORE_CONTINUATION",
+  "new_checkpoint": "/mnt/workspace/Jensen/project/3DGS/Uni3R/instance_B/results/B-03/SSH-MIG-04/attempt_01/synthetic_migration_W1.pt",
+  "checkpoint_bytes": 417403412,
+  "checkpoint_sha256": "eb0d8ed9da49fb7d3a71a6948baa1afc1fff35147993d85be946418b1210d7df",
+  "purpose": "SYNTHETIC_ENGINE_DIAGNOSTIC_NOT_FOR_REAL_TRAINING",
+  "executed_original_schedule_prefix": [
+    "W1",
+    "I",
+    "W2"
+  ],
+  "W3": "NOT_RERUN to retain immutable global 8-call budget",
+  "original_five_call_diagnostic_rerun": false,
+  "new_optimizer_calls": 3,
+  "global_ledger_calls_before": 5,
+  "global_ledger_calls_after": 8,
+  "continuous_logical_updates": 2,
+  "resumed_logical_updates": 2,
+  "saved_state_outputs_exact": true,
+  "final_student_optimizer_counters_cursor_LR_RNG_exact": true,
+  "final_raw_output_max_errors": {
+    "mask_logits": 0.0,
+    "objectness_logits": 0.0,
+    "query_features": 0.0
+  },
+  "initialization_unchanged": true,
+  "GPU_USED": "NO",
+  "real_training": "NOT_RUN"
+}

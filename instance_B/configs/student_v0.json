@@ -1,0 +1,23 @@
+{
+  "height": 256,
+  "width": 256,
+  "views": 2,
+  "token_layers": [4, 11, 17, 23],
+  "token_dim": 2048,
+  "patch_size": 16,
+  "num_queries": 100,
+  "hidden_dim": 256,
+  "decoder_layers": 6,
+  "attention_heads": 8,
+  "feedforward_dim": 1024,
+  "mask_feature_dim": 64,
+  "memory_strides": [8, 16],
+  "max_memory_tokens": 8192,
+  "xyz_epsilon": 0.000001,
+  "xyz_normalization": "per_scene_mean_rms_float64",
+  "geometry_confidence_transform": "log1p_nonnegative_score",
+  "rgb_normalization": "minus_one_to_one",
+  "dropout": 0.0,
+  "init_mode": "pretrained_2views",
+  "profile": "default_v0"
+}
