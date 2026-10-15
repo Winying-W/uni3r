@@ -48,3 +48,16 @@ submodules/renderpy/
 external/
 instance_A/results/
 instance_B/results/
+
+# These paths may be symlinks to EFS rather than local directories.
+/checkpoints
+/.cache
+/logs
+/outputs
+/test_results
+/instance_A/.cache
+/instance_A/.tmp
+/instance_A/results
+/instance_B/.cache
+/instance_B/.tmp
+/instance_B/results
