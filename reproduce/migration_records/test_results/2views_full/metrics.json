@@ -1,0 +1,32 @@
+{
+  "checkpoint": "checkpoints/output/2views.pth",
+  "dataset": "TestDataset(split='test', ROOT='/mnt/workspace/Jensen/project/3DGS/data/scannet_test', resolution=(256, 256), seed=777, num_views=2)",
+  "criterion": "TestLoss(pose_align_steps=100, num_views=2)",
+  "samples": 320,
+  "shards": 4,
+  "metrics": {
+    "psnr": 25.371536254882812,
+    "ssim": 0.8671439290046692,
+    "miou": 0.2836458529345691,
+    "accuracy": 0.819759726524353,
+    "depth_metric": {
+      "AbsRel": 0.04852079227566719,
+      "RMSE": 0.15368805825710297,
+      "Delta1": 0.5181326270103455,
+      "Delta2": 0.7552081942558289,
+      "Delta3": 0.8605158925056458
+    },
+    "iou_per_class": [
+      0.5538603663444519,
+      0.5886344909667969,
+      0.04274655506014824,
+      0.15912994742393494,
+      0.2094241827726364,
+      0.10596324503421783,
+      0.11881573498249054,
+      0.4905923008918762
+    ],
+    "lpips": 0.14119874190073461,
+    "average_inference_seconds": 1.9535178874240955
+  }
+}
