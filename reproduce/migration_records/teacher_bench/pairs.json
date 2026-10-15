@@ -1,0 +1,1642 @@
+[
+ {
+  "scan": "scene0051_00",
+  "context_ids": [
+   209,
+   221
+  ],
+  "iou": 0.6043
+ },
+ {
+  "scan": "scene0051_00",
+  "context_ids": [
+   238,
+   249
+  ],
+  "iou": 0.6578
+ },
+ {
+  "scan": "scene0051_00",
+  "context_ids": [
+   759,
+   769
+  ],
+  "iou": 0.3879
+ },
+ {
+  "scan": "scene0051_00",
+  "context_ids": [
+   760,
+   858
+  ],
+  "iou": 0.3285
+ },
+ {
+  "scan": "scene0051_00",
+  "context_ids": [
+   784,
+   806
+  ],
+  "iou": 0.3383
+ },
+ {
+  "scan": "scene0051_01",
+  "context_ids": [
+   277,
+   298
+  ],
+  "iou": 0.3507
+ },
+ {
+  "scan": "scene0051_01",
+  "context_ids": [
+   954,
+   986
+  ],
+  "iou": 0.4658
+ },
+ {
+  "scan": "scene0051_01",
+  "context_ids": [
+   1162,
+   1199
+  ],
+  "iou": 0.3477
+ },
+ {
+  "scan": "scene0051_01",
+  "context_ids": [
+   1277,
+   1308
+  ],
+  "iou": 0.3554
+ },
+ {
+  "scan": "scene0051_01",
+  "context_ids": [
+   1559,
+   1575
+  ],
+  "iou": 0.3512
+ },
+ {
+  "scan": "scene0051_02",
+  "context_ids": [
+   577,
+   602
+  ],
+  "iou": 0.4932
+ },
+ {
+  "scan": "scene0051_02",
+  "context_ids": [
+   1091,
+   1114
+  ],
+  "iou": 0.4871
+ },
+ {
+  "scan": "scene0051_02",
+  "context_ids": [
+   1142,
+   1156
+  ],
+  "iou": 0.5501
+ },
+ {
+  "scan": "scene0051_02",
+  "context_ids": [
+   1203,
+   1213
+  ],
+  "iou": 0.5919
+ },
+ {
+  "scan": "scene0051_02",
+  "context_ids": [
+   1888,
+   1910
+  ],
+  "iou": 0.6199
+ },
+ {
+  "scan": "scene0051_03",
+  "context_ids": [
+   86,
+   101
+  ],
+  "iou": 0.4714
+ },
+ {
+  "scan": "scene0051_03",
+  "context_ids": [
+   369,
+   380
+  ],
+  "iou": 0.531
+ },
+ {
+  "scan": "scene0051_03",
+  "context_ids": [
+   1557,
+   1584
+  ],
+  "iou": 0.5368
+ },
+ {
+  "scan": "scene0051_03",
+  "context_ids": [
+   1708,
+   1726
+  ],
+  "iou": 0.382
+ },
+ {
+  "scan": "scene0051_03",
+  "context_ids": [
+   1916,
+   1994
+  ],
+  "iou": 0.3182
+ },
+ {
+  "scan": "scene0056_00",
+  "context_ids": [
+   80,
+   105
+  ],
+  "iou": 0.3395
+ },
+ {
+  "scan": "scene0056_00",
+  "context_ids": [
+   611,
+   625
+  ],
+  "iou": 0.4236
+ },
+ {
+  "scan": "scene0056_00",
+  "context_ids": [
+   1311,
+   1332
+  ],
+  "iou": 0.3671
+ },
+ {
+  "scan": "scene0056_00",
+  "context_ids": [
+   1678,
+   1711
+  ],
+  "iou": 0.3454
+ },
+ {
+  "scan": "scene0056_00",
+  "context_ids": [
+   1681,
+   1712
+  ],
+  "iou": 0.3139
+ },
+ {
+  "scan": "scene0056_01",
+  "context_ids": [
+   40,
+   67
+  ],
+  "iou": 0.4178
+ },
+ {
+  "scan": "scene0056_01",
+  "context_ids": [
+   160,
+   190
+  ],
+  "iou": 0.3338
+ },
+ {
+  "scan": "scene0056_01",
+  "context_ids": [
+   275,
+   339
+  ],
+  "iou": 0.3964
+ },
+ {
+  "scan": "scene0056_01",
+  "context_ids": [
+   745,
+   755
+  ],
+  "iou": 0.4906
+ },
+ {
+  "scan": "scene0056_01",
+  "context_ids": [
+   797,
+   812
+  ],
+  "iou": 0.4
+ },
+ {
+  "scan": "scene0085_00",
+  "context_ids": [
+   219,
+   247
+  ],
+  "iou": 0.3515
+ },
+ {
+  "scan": "scene0085_00",
+  "context_ids": [
+   477,
+   531
+  ],
+  "iou": 0.5328
+ },
+ {
+  "scan": "scene0085_00",
+  "context_ids": [
+   656,
+   691
+  ],
+  "iou": 0.6261
+ },
+ {
+  "scan": "scene0085_00",
+  "context_ids": [
+   830,
+   882
+  ],
+  "iou": 0.5879
+ },
+ {
+  "scan": "scene0085_00",
+  "context_ids": [
+   1109,
+   1161
+  ],
+  "iou": 0.4955
+ },
+ {
+  "scan": "scene0085_01",
+  "context_ids": [
+   29,
+   106
+  ],
+  "iou": 0.5654
+ },
+ {
+  "scan": "scene0085_01",
+  "context_ids": [
+   86,
+   141
+  ],
+  "iou": 0.6592
+ },
+ {
+  "scan": "scene0085_01",
+  "context_ids": [
+   171,
+   241
+  ],
+  "iou": 0.4798
+ },
+ {
+  "scan": "scene0085_01",
+  "context_ids": [
+   1435,
+   1458
+  ],
+  "iou": 0.6907
+ },
+ {
+  "scan": "scene0085_01",
+  "context_ids": [
+   1701,
+   1727
+  ],
+  "iou": 0.6333
+ },
+ {
+  "scan": "scene0106_00",
+  "context_ids": [
+   89,
+   124
+  ],
+  "iou": 0.3818
+ },
+ {
+  "scan": "scene0106_00",
+  "context_ids": [
+   318,
+   330
+  ],
+  "iou": 0.663
+ },
+ {
+  "scan": "scene0106_00",
+  "context_ids": [
+   632,
+   643
+  ],
+  "iou": 0.6516
+ },
+ {
+  "scan": "scene0106_00",
+  "context_ids": [
+   748,
+   766
+  ],
+  "iou": 0.6299
+ },
+ {
+  "scan": "scene0106_00",
+  "context_ids": [
+   2053,
+   2066
+  ],
+  "iou": 0.5519
+ },
+ {
+  "scan": "scene0106_01",
+  "context_ids": [
+   288,
+   310
+  ],
+  "iou": 0.6383
+ },
+ {
+  "scan": "scene0106_01",
+  "context_ids": [
+   1195,
+   1218
+  ],
+  "iou": 0.3457
+ },
+ {
+  "scan": "scene0106_01",
+  "context_ids": [
+   1295,
+   1328
+  ],
+  "iou": 0.5181
+ },
+ {
+  "scan": "scene0106_01",
+  "context_ids": [
+   1544,
+   1607
+  ],
+  "iou": 0.6686
+ },
+ {
+  "scan": "scene0106_01",
+  "context_ids": [
+   2303,
+   2324
+  ],
+  "iou": 0.4722
+ },
+ {
+  "scan": "scene0106_02",
+  "context_ids": [
+   283,
+   315
+  ],
+  "iou": 0.6046
+ },
+ {
+  "scan": "scene0106_02",
+  "context_ids": [
+   317,
+   354
+  ],
+  "iou": 0.4913
+ },
+ {
+  "scan": "scene0106_02",
+  "context_ids": [
+   328,
+   391
+  ],
+  "iou": 0.4393
+ },
+ {
+  "scan": "scene0106_02",
+  "context_ids": [
+   604,
+   693
+  ],
+  "iou": 0.3942
+ },
+ {
+  "scan": "scene0106_02",
+  "context_ids": [
+   622,
+   673
+  ],
+  "iou": 0.4573
+ },
+ {
+  "scan": "scene0167_00",
+  "context_ids": [
+   255,
+   351
+  ],
+  "iou": 0.349
+ },
+ {
+  "scan": "scene0167_00",
+  "context_ids": [
+   475,
+   517
+  ],
+  "iou": 0.4447
+ },
+ {
+  "scan": "scene0167_00",
+  "context_ids": [
+   843,
+   862
+  ],
+  "iou": 0.5895
+ },
+ {
+  "scan": "scene0167_00",
+  "context_ids": [
+   1809,
+   1831
+  ],
+  "iou": 0.3845
+ },
+ {
+  "scan": "scene0167_00",
+  "context_ids": [
+   1974,
+   1991
+  ],
+  "iou": 0.6451
+ },
+ {
+  "scan": "scene0176_00",
+  "context_ids": [
+   12,
+   40
+  ],
+  "iou": 0.4773
+ },
+ {
+  "scan": "scene0176_00",
+  "context_ids": [
+   376,
+   425
+  ],
+  "iou": 0.3025
+ },
+ {
+  "scan": "scene0176_00",
+  "context_ids": [
+   409,
+   424
+  ],
+  "iou": 0.5505
+ },
+ {
+  "scan": "scene0176_00",
+  "context_ids": [
+   598,
+   632
+  ],
+  "iou": 0.6935
+ },
+ {
+  "scan": "scene0176_00",
+  "context_ids": [
+   630,
+   728
+  ],
+  "iou": 0.3885
+ },
+ {
+  "scan": "scene0227_00",
+  "context_ids": [
+   326,
+   366
+  ],
+  "iou": 0.3206
+ },
+ {
+  "scan": "scene0227_00",
+  "context_ids": [
+   598,
+   659
+  ],
+  "iou": 0.7879
+ },
+ {
+  "scan": "scene0227_00",
+  "context_ids": [
+   750,
+   763
+  ],
+  "iou": 0.6006
+ },
+ {
+  "scan": "scene0227_00",
+  "context_ids": [
+   814,
+   853
+  ],
+  "iou": 0.5625
+ },
+ {
+  "scan": "scene0227_00",
+  "context_ids": [
+   912,
+   956
+  ],
+  "iou": 0.4471
+ },
+ {
+  "scan": "scene0245_00",
+  "context_ids": [
+   45,
+   84
+  ],
+  "iou": 0.3953
+ },
+ {
+  "scan": "scene0245_00",
+  "context_ids": [
+   134,
+   155
+  ],
+  "iou": 0.4738
+ },
+ {
+  "scan": "scene0245_00",
+  "context_ids": [
+   692,
+   741
+  ],
+  "iou": 0.323
+ },
+ {
+  "scan": "scene0245_00",
+  "context_ids": [
+   770,
+   855
+  ],
+  "iou": 0.5647
+ },
+ {
+  "scan": "scene0245_00",
+  "context_ids": [
+   801,
+   847
+  ],
+  "iou": 0.426
+ },
+ {
+  "scan": "scene0264_00",
+  "context_ids": [
+   659,
+   699
+  ],
+  "iou": 0.7401
+ },
+ {
+  "scan": "scene0264_00",
+  "context_ids": [
+   994,
+   1045
+  ],
+  "iou": 0.4403
+ },
+ {
+  "scan": "scene0264_00",
+  "context_ids": [
+   1054,
+   1072
+  ],
+  "iou": 0.6847
+ },
+ {
+  "scan": "scene0264_00",
+  "context_ids": [
+   1269,
+   1282
+  ],
+  "iou": 0.7335
+ },
+ {
+  "scan": "scene0264_00",
+  "context_ids": [
+   1285,
+   1301
+  ],
+  "iou": 0.7192
+ },
+ {
+  "scan": "scene0264_01",
+  "context_ids": [
+   7,
+   53
+  ],
+  "iou": 0.4782
+ },
+ {
+  "scan": "scene0264_01",
+  "context_ids": [
+   246,
+   280
+  ],
+  "iou": 0.5432
+ },
+ {
+  "scan": "scene0264_01",
+  "context_ids": [
+   1182,
+   1192
+  ],
+  "iou": 0.6412
+ },
+ {
+  "scan": "scene0264_01",
+  "context_ids": [
+   1259,
+   1294
+  ],
+  "iou": 0.3668
+ },
+ {
+  "scan": "scene0264_01",
+  "context_ids": [
+   1455,
+   1475
+  ],
+  "iou": 0.6382
+ },
+ {
+  "scan": "scene0264_02",
+  "context_ids": [
+   88,
+   122
+  ],
+  "iou": 0.5132
+ },
+ {
+  "scan": "scene0264_02",
+  "context_ids": [
+   350,
+   362
+  ],
+  "iou": 0.7865
+ },
+ {
+  "scan": "scene0264_02",
+  "context_ids": [
+   363,
+   384
+  ],
+  "iou": 0.4059
+ },
+ {
+  "scan": "scene0264_02",
+  "context_ids": [
+   371,
+   407
+  ],
+  "iou": 0.3127
+ },
+ {
+  "scan": "scene0264_02",
+  "context_ids": [
+   466,
+   482
+  ],
+  "iou": 0.7627
+ },
+ {
+  "scan": "scene0274_00",
+  "context_ids": [
+   151,
+   164
+  ],
+  "iou": 0.7171
+ },
+ {
+  "scan": "scene0274_00",
+  "context_ids": [
+   326,
+   409
+  ],
+  "iou": 0.3456
+ },
+ {
+  "scan": "scene0274_00",
+  "context_ids": [
+   1171,
+   1222
+  ],
+  "iou": 0.3546
+ },
+ {
+  "scan": "scene0274_00",
+  "context_ids": [
+   1569,
+   1652
+  ],
+  "iou": 0.344
+ },
+ {
+  "scan": "scene0274_00",
+  "context_ids": [
+   1589,
+   1602
+  ],
+  "iou": 0.7565
+ },
+ {
+  "scan": "scene0274_01",
+  "context_ids": [
+   22,
+   44
+  ],
+  "iou": 0.7168
+ },
+ {
+  "scan": "scene0274_01",
+  "context_ids": [
+   63,
+   94
+  ],
+  "iou": 0.6287
+ },
+ {
+  "scan": "scene0274_01",
+  "context_ids": [
+   325,
+   336
+  ],
+  "iou": 0.7888
+ },
+ {
+  "scan": "scene0274_01",
+  "context_ids": [
+   703,
+   754
+  ],
+  "iou": 0.7101
+ },
+ {
+  "scan": "scene0274_01",
+  "context_ids": [
+   1303,
+   1322
+  ],
+  "iou": 0.7683
+ },
+ {
+  "scan": "scene0274_02",
+  "context_ids": [
+   261,
+   297
+  ],
+  "iou": 0.5186
+ },
+ {
+  "scan": "scene0274_02",
+  "context_ids": [
+   941,
+   961
+  ],
+  "iou": 0.5035
+ },
+ {
+  "scan": "scene0274_02",
+  "context_ids": [
+   2104,
+   2173
+  ],
+  "iou": 0.5336
+ },
+ {
+  "scan": "scene0274_02",
+  "context_ids": [
+   2233,
+   2255
+  ],
+  "iou": 0.5597
+ },
+ {
+  "scan": "scene0274_02",
+  "context_ids": [
+   2237,
+   2253
+  ],
+  "iou": 0.7318
+ },
+ {
+  "scan": "scene0305_00",
+  "context_ids": [
+   549,
+   574
+  ],
+  "iou": 0.4897
+ },
+ {
+  "scan": "scene0305_00",
+  "context_ids": [
+   660,
+   717
+  ],
+  "iou": 0.3084
+ },
+ {
+  "scan": "scene0305_00",
+  "context_ids": [
+   726,
+   755
+  ],
+  "iou": 0.6737
+ },
+ {
+  "scan": "scene0305_00",
+  "context_ids": [
+   1605,
+   1617
+  ],
+  "iou": 0.665
+ },
+ {
+  "scan": "scene0305_00",
+  "context_ids": [
+   2202,
+   2234
+  ],
+  "iou": 0.5869
+ },
+ {
+  "scan": "scene0305_01",
+  "context_ids": [
+   24,
+   59
+  ],
+  "iou": 0.3163
+ },
+ {
+  "scan": "scene0305_01",
+  "context_ids": [
+   556,
+   597
+  ],
+  "iou": 0.5304
+ },
+ {
+  "scan": "scene0305_01",
+  "context_ids": [
+   1048,
+   1104
+  ],
+  "iou": 0.3409
+ },
+ {
+  "scan": "scene0305_01",
+  "context_ids": [
+   1168,
+   1206
+  ],
+  "iou": 0.3623
+ },
+ {
+  "scan": "scene0305_01",
+  "context_ids": [
+   1483,
+   1500
+  ],
+  "iou": 0.3371
+ },
+ {
+  "scan": "scene0332_00",
+  "context_ids": [
+   108,
+   130
+  ],
+  "iou": 0.7814
+ },
+ {
+  "scan": "scene0332_00",
+  "context_ids": [
+   719,
+   738
+  ],
+  "iou": 0.7256
+ },
+ {
+  "scan": "scene0332_00",
+  "context_ids": [
+   1109,
+   1161
+  ],
+  "iou": 0.3553
+ },
+ {
+  "scan": "scene0332_00",
+  "context_ids": [
+   1572,
+   1602
+  ],
+  "iou": 0.3751
+ },
+ {
+  "scan": "scene0332_00",
+  "context_ids": [
+   1714,
+   1747
+  ],
+  "iou": 0.5266
+ },
+ {
+  "scan": "scene0332_01",
+  "context_ids": [
+   7,
+   94
+  ],
+  "iou": 0.4245
+ },
+ {
+  "scan": "scene0332_01",
+  "context_ids": [
+   71,
+   126
+  ],
+  "iou": 0.3521
+ },
+ {
+  "scan": "scene0332_01",
+  "context_ids": [
+   193,
+   219
+  ],
+  "iou": 0.7274
+ },
+ {
+  "scan": "scene0332_01",
+  "context_ids": [
+   403,
+   413
+  ],
+  "iou": 0.7328
+ },
+ {
+  "scan": "scene0332_01",
+  "context_ids": [
+   548,
+   615
+  ],
+  "iou": 0.3249
+ },
+ {
+  "scan": "scene0332_02",
+  "context_ids": [
+   739,
+   755
+  ],
+  "iou": 0.5196
+ },
+ {
+  "scan": "scene0332_02",
+  "context_ids": [
+   878,
+   961
+  ],
+  "iou": 0.4139
+ },
+ {
+  "scan": "scene0332_02",
+  "context_ids": [
+   910,
+   948
+  ],
+  "iou": 0.7036
+ },
+ {
+  "scan": "scene0332_02",
+  "context_ids": [
+   1332,
+   1414
+  ],
+  "iou": 0.7018
+ },
+ {
+  "scan": "scene0332_02",
+  "context_ids": [
+   1390,
+   1424
+  ],
+  "iou": 0.344
+ },
+ {
+  "scan": "scene0401_00",
+  "context_ids": [
+   362,
+   403
+  ],
+  "iou": 0.589
+ },
+ {
+  "scan": "scene0401_00",
+  "context_ids": [
+   1150,
+   1164
+  ],
+  "iou": 0.765
+ },
+ {
+  "scan": "scene0401_00",
+  "context_ids": [
+   1995,
+   2052
+  ],
+  "iou": 0.3688
+ },
+ {
+  "scan": "scene0401_00",
+  "context_ids": [
+   2118,
+   2150
+  ],
+  "iou": 0.3169
+ },
+ {
+  "scan": "scene0401_00",
+  "context_ids": [
+   2138,
+   2154
+  ],
+  "iou": 0.5597
+ },
+ {
+  "scan": "scene0415_00",
+  "context_ids": [
+   27,
+   63
+  ],
+  "iou": 0.7176
+ },
+ {
+  "scan": "scene0415_00",
+  "context_ids": [
+   63,
+   152
+  ],
+  "iou": 0.3785
+ },
+ {
+  "scan": "scene0415_00",
+  "context_ids": [
+   155,
+   195
+  ],
+  "iou": 0.4623
+ },
+ {
+  "scan": "scene0415_00",
+  "context_ids": [
+   264,
+   275
+  ],
+  "iou": 0.7732
+ },
+ {
+  "scan": "scene0415_00",
+  "context_ids": [
+   1069,
+   1094
+  ],
+  "iou": 0.5866
+ },
+ {
+  "scan": "scene0415_01",
+  "context_ids": [
+   104,
+   138
+  ],
+  "iou": 0.4204
+ },
+ {
+  "scan": "scene0415_01",
+  "context_ids": [
+   381,
+   428
+  ],
+  "iou": 0.3379
+ },
+ {
+  "scan": "scene0415_01",
+  "context_ids": [
+   677,
+   704
+  ],
+  "iou": 0.7132
+ },
+ {
+  "scan": "scene0415_01",
+  "context_ids": [
+   747,
+   783
+  ],
+  "iou": 0.5315
+ },
+ {
+  "scan": "scene0415_01",
+  "context_ids": [
+   894,
+   925
+  ],
+  "iou": 0.4691
+ },
+ {
+  "scan": "scene0415_02",
+  "context_ids": [
+   213,
+   230
+  ],
+  "iou": 0.5344
+ },
+ {
+  "scan": "scene0415_02",
+  "context_ids": [
+   631,
+   674
+  ],
+  "iou": 0.4658
+ },
+ {
+  "scan": "scene0415_02",
+  "context_ids": [
+   743,
+   811
+  ],
+  "iou": 0.3867
+ },
+ {
+  "scan": "scene0415_02",
+  "context_ids": [
+   986,
+   1071
+  ],
+  "iou": 0.3981
+ },
+ {
+  "scan": "scene0415_02",
+  "context_ids": [
+   995,
+   1040
+  ],
+  "iou": 0.7153
+ },
+ {
+  "scan": "scene0433_00",
+  "context_ids": [
+   227,
+   257
+  ],
+  "iou": 0.3227
+ },
+ {
+  "scan": "scene0433_00",
+  "context_ids": [
+   272,
+   291
+  ],
+  "iou": 0.4151
+ },
+ {
+  "scan": "scene0433_00",
+  "context_ids": [
+   290,
+   318
+  ],
+  "iou": 0.4426
+ },
+ {
+  "scan": "scene0433_00",
+  "context_ids": [
+   657,
+   693
+  ],
+  "iou": 0.5035
+ },
+ {
+  "scan": "scene0433_00",
+  "context_ids": [
+   1198,
+   1216
+  ],
+  "iou": 0.3886
+ },
+ {
+  "scan": "scene0434_00",
+  "context_ids": [
+   485,
+   506
+  ],
+  "iou": 0.761
+ },
+ {
+  "scan": "scene0434_00",
+  "context_ids": [
+   502,
+   568
+  ],
+  "iou": 0.4889
+ },
+ {
+  "scan": "scene0434_00",
+  "context_ids": [
+   743,
+   794
+  ],
+  "iou": 0.4156
+ },
+ {
+  "scan": "scene0434_00",
+  "context_ids": [
+   1524,
+   1605
+  ],
+  "iou": 0.3331
+ },
+ {
+  "scan": "scene0434_00",
+  "context_ids": [
+   1649,
+   1722
+  ],
+  "iou": 0.7911
+ },
+ {
+  "scan": "scene0434_01",
+  "context_ids": [
+   179,
+   225
+  ],
+  "iou": 0.3793
+ },
+ {
+  "scan": "scene0434_01",
+  "context_ids": [
+   489,
+   576
+  ],
+  "iou": 0.3637
+ },
+ {
+  "scan": "scene0434_01",
+  "context_ids": [
+   574,
+   617
+  ],
+  "iou": 0.4941
+ },
+ {
+  "scan": "scene0434_01",
+  "context_ids": [
+   751,
+   763
+  ],
+  "iou": 0.7797
+ },
+ {
+  "scan": "scene0434_01",
+  "context_ids": [
+   1310,
+   1341
+  ],
+  "iou": 0.4562
+ },
+ {
+  "scan": "scene0434_02",
+  "context_ids": [
+   66,
+   154
+  ],
+  "iou": 0.5486
+ },
+ {
+  "scan": "scene0434_02",
+  "context_ids": [
+   196,
+   217
+  ],
+  "iou": 0.6693
+ },
+ {
+  "scan": "scene0434_02",
+  "context_ids": [
+   482,
+   510
+  ],
+  "iou": 0.583
+ },
+ {
+  "scan": "scene0434_02",
+  "context_ids": [
+   1070,
+   1138
+  ],
+  "iou": 0.4875
+ },
+ {
+  "scan": "scene0434_02",
+  "context_ids": [
+   1445,
+   1457
+  ],
+  "iou": 0.6522
+ },
+ {
+  "scan": "scene0443_00",
+  "context_ids": [
+   53,
+   75
+  ],
+  "iou": 0.4268
+ },
+ {
+  "scan": "scene0443_00",
+  "context_ids": [
+   97,
+   115
+  ],
+  "iou": 0.3836
+ },
+ {
+  "scan": "scene0443_00",
+  "context_ids": [
+   175,
+   193
+  ],
+  "iou": 0.5305
+ },
+ {
+  "scan": "scene0443_00",
+  "context_ids": [
+   221,
+   239
+  ],
+  "iou": 0.5009
+ },
+ {
+  "scan": "scene0443_00",
+  "context_ids": [
+   340,
+   366
+  ],
+  "iou": 0.3778
+ },
+ {
+  "scan": "scene0448_00",
+  "context_ids": [
+   463,
+   548
+  ],
+  "iou": 0.7755
+ },
+ {
+  "scan": "scene0448_00",
+  "context_ids": [
+   800,
+   837
+  ],
+  "iou": 0.5528
+ },
+ {
+  "scan": "scene0448_00",
+  "context_ids": [
+   987,
+   1001
+  ],
+  "iou": 0.539
+ },
+ {
+  "scan": "scene0448_00",
+  "context_ids": [
+   1384,
+   1484
+  ],
+  "iou": 0.5965
+ },
+ {
+  "scan": "scene0448_00",
+  "context_ids": [
+   1593,
+   1664
+  ],
+  "iou": 0.3947
+ },
+ {
+  "scan": "scene0448_01",
+  "context_ids": [
+   275,
+   338
+  ],
+  "iou": 0.6714
+ },
+ {
+  "scan": "scene0448_01",
+  "context_ids": [
+   463,
+   511
+  ],
+  "iou": 0.7723
+ },
+ {
+  "scan": "scene0448_01",
+  "context_ids": [
+   1531,
+   1564
+  ],
+  "iou": 0.5425
+ },
+ {
+  "scan": "scene0448_01",
+  "context_ids": [
+   1549,
+   1594
+  ],
+  "iou": 0.517
+ },
+ {
+  "scan": "scene0448_01",
+  "context_ids": [
+   2524,
+   2538
+  ],
+  "iou": 0.5254
+ },
+ {
+  "scan": "scene0448_02",
+  "context_ids": [
+   371,
+   441
+  ],
+  "iou": 0.4098
+ },
+ {
+  "scan": "scene0448_02",
+  "context_ids": [
+   400,
+   444
+  ],
+  "iou": 0.5709
+ },
+ {
+  "scan": "scene0448_02",
+  "context_ids": [
+   982,
+   1027
+  ],
+  "iou": 0.3518
+ },
+ {
+  "scan": "scene0448_02",
+  "context_ids": [
+   1500,
+   1599
+  ],
+  "iou": 0.4434
+ },
+ {
+  "scan": "scene0448_02",
+  "context_ids": [
+   1757,
+   1810
+  ],
+  "iou": 0.412
+ },
+ {
+  "scan": "scene0530_00",
+  "context_ids": [
+   7,
+   60
+  ],
+  "iou": 0.5543
+ },
+ {
+  "scan": "scene0530_00",
+  "context_ids": [
+   76,
+   88
+  ],
+  "iou": 0.7065
+ },
+ {
+  "scan": "scene0530_00",
+  "context_ids": [
+   414,
+   429
+  ],
+  "iou": 0.4778
+ },
+ {
+  "scan": "scene0530_00",
+  "context_ids": [
+   596,
+   632
+  ],
+  "iou": 0.7576
+ },
+ {
+  "scan": "scene0530_00",
+  "context_ids": [
+   911,
+   987
+  ],
+  "iou": 0.3255
+ },
+ {
+  "scan": "scene0554_00",
+  "context_ids": [
+   1687,
+   1751
+  ],
+  "iou": 0.331
+ },
+ {
+  "scan": "scene0554_00",
+  "context_ids": [
+   2005,
+   2017
+  ],
+  "iou": 0.644
+ },
+ {
+  "scan": "scene0554_00",
+  "context_ids": [
+   2530,
+   2581
+  ],
+  "iou": 0.5005
+ },
+ {
+  "scan": "scene0554_00",
+  "context_ids": [
+   2894,
+   2906
+  ],
+  "iou": 0.7733
+ },
+ {
+  "scan": "scene0554_00",
+  "context_ids": [
+   2950,
+   2999
+  ],
+  "iou": 0.5741
+ },
+ {
+  "scan": "scene0554_01",
+  "context_ids": [
+   444,
+   482
+  ],
+  "iou": 0.3559
+ },
+ {
+  "scan": "scene0554_01",
+  "context_ids": [
+   728,
+   754
+  ],
+  "iou": 0.4119
+ },
+ {
+  "scan": "scene0554_01",
+  "context_ids": [
+   977,
+   1043
+  ],
+  "iou": 0.5918
+ },
+ {
+  "scan": "scene0554_01",
+  "context_ids": [
+   2089,
+   2108
+  ],
+  "iou": 0.4354
+ },
+ {
+  "scan": "scene0554_01",
+  "context_ids": [
+   3129,
+   3175
+  ],
+  "iou": 0.3132
+ }
+]

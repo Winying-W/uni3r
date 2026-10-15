@@ -5,6 +5,7 @@ import bisect
 import io
 import json
 from pathlib import Path
+import os
 import struct
 import time
 import urllib.request
@@ -13,7 +14,7 @@ import zlib
 from download_reproduction import api, ROOT
 
 REPO = 'maksimko123/scannet'
-DEST = ROOT.parent / 'data/scannet/calibration'
+DEST = Path(os.environ.get('DATA_ROOT', ROOT / 'data')) / 'scannet/calibration'
 
 
 def fetch(url, start, length):

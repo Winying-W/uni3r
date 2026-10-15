@@ -9,6 +9,7 @@ import concurrent.futures
 import io
 import json
 from pathlib import Path
+import os
 import tarfile
 import numpy as np
 from PIL import Image
@@ -55,7 +56,7 @@ def convert(archive, output):
 
 def main():
     p = argparse.ArgumentParser()
-    data = Path(__file__).resolve().parents[2] / 'data'
+    data = Path(os.environ.get('DATA_ROOT', Path(__file__).resolve().parents[1] / 'data'))
     p.add_argument('--archives', type=Path, default=data / 'scannetpp/archives')
     p.add_argument('--output', type=Path, default=data / 'scannetpp_processed')
     p.add_argument('--workers', type=int, default=8)

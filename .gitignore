@@ -45,5 +45,6 @@ submodules/renderpy/
 *.whl
 .venv/
 .env.daxiang.sh
+external/
 instance_A/results/
 instance_B/results/

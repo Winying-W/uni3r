@@ -2,9 +2,10 @@
 import concurrent.futures
 import json
 from pathlib import Path
+import os
 from download_reproduction import api, download, ROOT
 
-DATA = ROOT.parent / 'data'
+DATA = Path(os.environ.get('DATA_ROOT', ROOT / 'data'))
 
 
 def main():

@@ -8,13 +8,19 @@ import subprocess
 import time
 import urllib.request
 import shutil
+import os
 
 ROOT = Path(__file__).resolve().parents[1]
+HF_ENDPOINT = os.environ.get('HF_ENDPOINT', 'https://huggingface.co').rstrip('/')
 
 
 def api(path):
-    with urllib.request.urlopen('https://huggingface.co/api/' + path, timeout=60) as r:
-        return json.load(r)
+    # Some deployment networks reject Python's default urllib user agent.
+    raw = subprocess.check_output([
+        'curl', '-4', '-fsSL', '--retry', '4', '--connect-timeout', '20',
+        '--max-time', '120', HF_ENDPOINT + '/api/' + path,
+    ])
+    return json.loads(raw)
 
 
 def sha256(path):
@@ -47,7 +53,7 @@ def download_ranges(url, partial, size):
         dest = directory / str(start)
         if dest.exists() and dest.stat().st_size == end - start + 1:
             return dest
-        subprocess.run(['curl', '-fsSL', '--noproxy', '*', '--retry', '5', '--retry-all-errors',
+        subprocess.run(['curl', '-fsSL', '--retry', '5', '--retry-all-errors',
                         '--connect-timeout', '30', '--max-time', '600',
                         '--range', f'{start}-{end}', '-o', str(dest),
                         url + f'&range_start={start}'], check=True)
@@ -78,12 +84,12 @@ def download(repo, kind, item, target):
             return target
     partial = target.with_name(target.name + '.part')
     prefix = 'datasets/' if kind == 'datasets' else ''
-    url = f'https://huggingface.co/{prefix}{repo}/resolve/main/{item["path"]}?download=true&t={int(time.time())}'
+    url = f'{HF_ENDPOINT}/{prefix}{repo}/resolve/main/{item["path"]}?download=true&t={int(time.time())}'
     print('Downloading:', target, item['size'], flush=True)
     if item['size'] >= 1024 ** 3:
         downloaded, range_dir = download_ranges(url, partial, item['size'])
     else:
-        subprocess.run(['curl', '-fsSL', '--noproxy', '*', '--retry', '5', '--retry-all-errors', '--connect-timeout', '30',
+        subprocess.run(['curl', '-fsSL', '--retry', '5', '--retry-all-errors', '--connect-timeout', '30',
                         '--speed-time', '120', '--speed-limit', '1024', '-C', '-',
                         '-o', str(partial), url], check=True)
         downloaded, range_dir = partial, None
@@ -103,7 +109,7 @@ def download_public_url(url, target, expected_sha256):
         print('Verified existing:', target, flush=True)
         return
     partial = target.with_name(target.name + '.part')
-    subprocess.run(['curl', '-fsSL', '--noproxy', '*', '--retry', '5', '--retry-all-errors',
+    subprocess.run(['curl', '-fsSL', '--retry', '5', '--retry-all-errors',
                     '--connect-timeout', '30', '-C', '-', '-o', str(partial), url], check=True)
     if sha256(partial) != expected_sha256:
         raise RuntimeError(f'SHA-256 mismatch: {partial}')
@@ -113,7 +119,7 @@ def download_public_url(url, target, expected_sha256):
 def main():
     p = argparse.ArgumentParser()
     p.add_argument('--views', type=int, nargs='+', default=[2], choices=[2, 8, 16])
-    p.add_argument('--data-root', type=Path, default=ROOT.parent / 'data')
+    p.add_argument('--data-root', type=Path, default=Path(os.environ.get('DATA_ROOT', ROOT / 'data')))
     p.add_argument('--weights-only', action='store_true',
                    help='Download official model weights without the ScanNet test archive')
     args = p.parse_args()

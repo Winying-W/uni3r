@@ -2,9 +2,10 @@
 import concurrent.futures
 import json
 from pathlib import Path
+import os
 import numpy as np
 
-DATA = Path(__file__).resolve().parents[2] / 'data'
+DATA = Path(os.environ.get('DATA_ROOT', Path(__file__).resolve().parents[1] / 'data'))
 
 
 def check(task):

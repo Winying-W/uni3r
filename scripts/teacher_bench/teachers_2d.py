@@ -19,13 +19,15 @@ import json
 import os
 import shutil
 import tempfile
+from pathlib import Path
 
 import numpy as np
 import torch
 from PIL import Image
 
-GT_ROOT = os.environ.get('TEACHER_BENCH_DATA', '/opt/jensen_cache/teacher_bench_data')
-CKPT = '/opt/jensen_cache/ckpt'
+ROOT = Path(__file__).resolve().parents[2]
+GT_ROOT = os.environ.get('TEACHER_BENCH_DATA', str(ROOT / '.cache/teacher_bench_data'))
+CKPT = os.environ.get('TEACHER_CHECKPOINT_ROOT', str(ROOT / 'checkpoints/teachers'))
 SAM2_CFG = 'configs/sam2.1/sam2.1_hiera_l.yaml'
 THINGS = ['cabinet', 'bed', 'chair', 'sofa', 'table', 'door', 'window', 'bookshelf',
           'picture', 'counter', 'desk', 'curtain', 'refrigerator', 'shower curtain',

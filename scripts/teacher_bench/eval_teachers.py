@@ -28,7 +28,7 @@ import torch
 from PIL import Image
 from torchmetrics.detection import MeanAveragePrecision
 
-GT_ROOT = os.environ.get('TEACHER_BENCH_DATA', '/opt/jensen_cache/teacher_bench_data')
+GT_ROOT = os.environ.get('TEACHER_BENCH_DATA', os.path.abspath(os.path.join(os.path.dirname(__file__), '../../.cache/teacher_bench_data')))
 THINGS = ['cabinet', 'bed', 'chair', 'sofa', 'table', 'door', 'window', 'bookshelf',
           'picture', 'counter', 'desk', 'curtain', 'refrigerator', 'shower curtain',
           'toilet', 'sink', 'bathtub', 'otherfurniture']  # SIU3R instance class 1..18

@@ -155,11 +155,17 @@ def parse_tensor_descriptions(raw: bytes):
 
 def extract_dpt(checkpoint: Path) -> tuple[dict, dict]:
     checkpoint = checkpoint.resolve()
-    if checkpoint != ROOT / "checkpoints/output/2views.pth":
+    if checkpoint != (ROOT / "checkpoints/output/2views.pth").resolve():
         raise ValueError("Only the authorized 2views checkpoint path is supported")
     stat = checkpoint.stat()
-    if (stat.st_size, stat.st_mtime_ns) != (BASE_SIZE, BASE_MTIME_NS):
-        raise ValueError("Checkpoint changed since B-00 SHA256 receipt; re-review required")
+    if stat.st_size != BASE_SIZE:
+        raise ValueError("Checkpoint size differs from the verified official 2-view checkpoint")
+    digest = hashlib.sha256()
+    with checkpoint.open('rb') as stream:
+        for chunk in iter(lambda: stream.read(8 * 1024 * 1024), b''):
+            digest.update(chunk)
+    if digest.hexdigest() != BASE_SHA256:
+        raise ValueError("Checkpoint SHA256 differs from the verified official 2-view checkpoint")
     started = time.perf_counter()
     with zipfile.ZipFile(checkpoint) as archive:
         names = archive.namelist()
@@ -201,7 +207,7 @@ def extract_dpt(checkpoint: Path) -> tuple[dict, dict]:
     checked = strict_load_dpt(reference, state)
     report = {"status": "DPT_INIT_VERIFIED", "source_checkpoint": str(checkpoint),
               "source_checkpoint_sha256": BASE_SHA256,
-              "hash_provenance": "B-00 full hash receipt; B-01 size/mtime unchanged; no full rehash",
+              "hash_provenance": "Full SHA256 verified against B-00 official checkpoint hash before extraction",
               "source_size": stat.st_size, "source_mtime_ns": stat.st_mtime_ns,
               "source_prefix": "model.dpt_head.", "source_dtype_counts": {},
               "method": "static protocol-2 opcode interpretation + selected ZIP storage reads; no pickle execution",
@@ -219,8 +225,9 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--output-dir", type=Path, required=True)
     args = parser.parse_args()
-    out = args.output_dir.resolve()
-    if not out.is_relative_to(ROOT / "instance_B"):
+    out = args.output_dir.absolute()
+    roots = [(ROOT / "instance_B").resolve(), (ROOT / "instance_B/results").resolve()]
+    if not any(out.resolve().is_relative_to(root) for root in roots):
         raise ValueError("Output must stay in instance_B")
     state, report = extract_dpt(ROOT / "checkpoints/output/2views.pth")
     out.mkdir(parents=True, exist_ok=True)

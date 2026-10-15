@@ -25,13 +25,13 @@ from PIL import Image
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(HERE, 'mc_shim'))
-MC = '/opt/jensen_cache/code/MaskClustering'
+MC = os.environ.get('MASKCLUSTERING_ROOT', os.path.abspath(os.path.join(HERE, '../../external/MaskClustering')))
 sys.path.insert(0, MC)
 from graph.construction import mask_graph_construction  # noqa: E402
 from graph.iterative_clustering import iterative_clustering  # noqa: E402
 import utils.post_process as pp  # noqa: E402
 
-DATA = os.environ.get('TEACHER_BENCH_DATA', '/opt/jensen_cache/teacher_bench_data')
+DATA = os.environ.get('TEACHER_BENCH_DATA', os.path.abspath(os.path.join(HERE, '../../.cache/teacher_bench_data')))
 
 
 class BenchDataset:

@@ -14,13 +14,16 @@ import os
 import random
 import sys
 import tarfile
+from pathlib import Path
 from concurrent.futures import ProcessPoolExecutor
 
 import torch
 
-ARCH = '/mnt/workspace/Jensen/project/3DGS/data/siu3r_trainval_gt/archives'
-CACHE = os.environ.get('TEACHER_BENCH_DATA', '/opt/jensen_cache/teacher_bench_data')
-SCANS = open('/mnt/workspace/Jensen/project/3DGS/data/splits/val_scannet.txt').read().split()
+ROOT = Path(__file__).resolve().parents[2]
+DATA = Path(os.environ.get('DATA_ROOT', ROOT / 'data'))
+ARCH = str(DATA / 'siu3r_trainval_gt/archives')
+CACHE = os.environ.get('TEACHER_BENCH_DATA', str(ROOT / '.cache/teacher_bench_data'))
+SCANS = (DATA / 'splits/val_scannet.txt').read_text().split()
 PAIRS_PER_SCAN = 5
 
 

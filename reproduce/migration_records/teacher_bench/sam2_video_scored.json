@@ -1,0 +1,15 @@
+{
+ "pairs_scored": 205,
+ "pairs_missing": 0,
+ "frame_AP": 0.1314517855644226,
+ "frame_AP50": 0.2582780420780182,
+ "frame_AR100": 0.24517512321472168,
+ "pair_AP": 0.12354762852191925,
+ "pair_AP50": 0.25296449661254883,
+ "mCov": 0.4144664637158805,
+ "gt_objects": 1338,
+ "consistency": 0.976303317535545,
+ "consistency_matched": 211,
+ "both_view_objects": 540,
+ "preds_per_frame": 6.519512195121951
+}

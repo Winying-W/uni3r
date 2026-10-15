@@ -10,6 +10,7 @@ import concurrent.futures
 import io
 import json
 from pathlib import Path
+import os
 import tarfile
 import cv2
 import numpy as np
@@ -60,20 +61,24 @@ def process(scene, buffers, calibration, output):
 
 
 def main():
-    root = Path(__file__).resolve().parents[2] / 'data'
+    root = Path(os.environ.get('DATA_ROOT', Path(__file__).resolve().parents[1] / 'data'))
     p = argparse.ArgumentParser()
     p.add_argument('--archive', type=Path, default=root / 'scannet/archives/scannet_2d.tar.gz')
     p.add_argument('--calibration', type=Path, default=root / 'scannet/calibration')
     p.add_argument('--output', type=Path, default=root / 'scannet_processed')
     p.add_argument('--workers', type=int, default=8)
     p.add_argument('--max-scenes', type=int, default=0, help='0 converts the full archive')
+    p.add_argument('--scene-list', type=Path, help='Only recreate these existing scene IDs')
     args = p.parse_args()
+    selected = set(args.scene_list.read_text().split()) if args.scene_list else None
     cv2.setNumThreads(1)
     reports, pending = [], set()
     submitted = 0
     with concurrent.futures.ThreadPoolExecutor(max_workers=args.workers) as pool:
         def submit(scene, buffers):
             nonlocal pending, submitted
+            if selected is not None and scene not in selected:
+                return
             pending.add(pool.submit(process, scene, buffers, args.calibration, args.output))
             submitted += 1
             if len(pending) >= 2 * args.workers:

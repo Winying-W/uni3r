@@ -110,7 +110,8 @@ class DPTInitialization:
 def load_dpt_initialization(weights_path: str | Path, receipt_path: str | Path) -> DPTInitialization:
     """Read a small tensor-only artifact and verify its extraction receipt/hash."""
     weights, receipt_file = Path(weights_path).resolve(), Path(receipt_path).resolve()
-    if not all(p.is_relative_to(ROOT / "instance_B") for p in (weights, receipt_file)):
+    roots = [(ROOT / "instance_B").resolve(), (ROOT / "instance_B/results").resolve()]
+    if not all(any(p.is_relative_to(root) for root in roots) for p in (weights, receipt_file)):
         raise ValueError("DPT initialization artifacts must be under instance_B")
     receipt = json.loads(receipt_file.read_text())
     if receipt.get("status") != "DPT_INIT_VERIFIED" or receipt.get("source_checkpoint_sha256") != BASE_SHA256:
